@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg",
+      "PackagePath": "staticwebassets\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg"
+    },
+    {
+      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg",
+      "PackagePath": "staticwebassets\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.ELearningPlatform.API.props",
+      "PackagePath": "build\\ELearningPlatform.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ELearningPlatform.API.props",
+      "PackagePath": "buildMultiTargeting\\ELearningPlatform.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.ELearningPlatform.API.props",
+      "PackagePath": "buildTransitive\\ELearningPlatform.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

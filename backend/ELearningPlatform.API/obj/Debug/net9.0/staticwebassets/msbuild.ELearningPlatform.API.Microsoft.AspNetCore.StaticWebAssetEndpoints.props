@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/ELearningPlatform.API/profile-pictures/470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"19112"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 19:13:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ELearningPlatform.API/profile-pictures/470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.wg30n62jug.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wg30n62jug"},{"Name":"integrity","Value":"sha256-cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I="},{"Name":"label","Value":"_content/ELearningPlatform.API/profile-pictures/470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"19112"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 19:13:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ELearningPlatform.API/profile-pictures/883cbe79-edcf-4ad1-8924-07eecf1c0646_R.8itdayer99.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8itdayer99"},{"Name":"integrity","Value":"sha256-YHfLuUbNtYqPD0a2j28V\u002BxTFGP4bI9eFvn4RUsSG/PM="},{"Name":"label","Value":"_content/ELearningPlatform.API/profile-pictures/883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"59072"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022YHfLuUbNtYqPD0a2j28V\u002BxTFGP4bI9eFvn4RUsSG/PM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 18:17:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ELearningPlatform.API/profile-pictures/883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YHfLuUbNtYqPD0a2j28V\u002BxTFGP4bI9eFvn4RUsSG/PM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"59072"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022YHfLuUbNtYqPD0a2j28V\u002BxTFGP4bI9eFvn4RUsSG/PM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 18:17:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>
