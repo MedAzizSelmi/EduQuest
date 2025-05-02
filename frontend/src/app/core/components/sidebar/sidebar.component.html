@@ -1,0 +1,69 @@
+<!-- sidebar.component.html -->
+<mat-nav-list class="sidebar-nav">
+  <!-- Home Section -->
+  <div class="sidebar-section">
+    <h3 class="sidebar-header">Home</h3>
+    <a mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <mat-icon matListIcon>home</mat-icon>
+      <span matLine>Get Started</span>
+    </a>
+    <a mat-list-item routerLink="/courses" routerLinkActive="active">
+      <mat-icon matListIcon>search</mat-icon>
+      <span matLine>Browse Courses</span>
+    </a>
+    <a mat-list-item routerLink="/platform" routerLinkActive="active">
+      <mat-icon matListIcon>school</mat-icon>
+      <span matLine>E-Learning Platform</span>
+    </a>
+  </div>
+
+  <!-- Account Section -->
+  <div class="sidebar-section">
+    <h3 class="sidebar-header">Account</h3>
+    <a mat-list-item routerLink="/profile" routerLinkActive="active">
+      <mat-icon matListIcon>person</mat-icon>
+      <span matLine>My Profile</span>
+    </a>
+    <a mat-list-item routerLink="/settings" routerLinkActive="active">
+      <mat-icon matListIcon>settings</mat-icon>
+      <span matLine>Settings</span>
+    </a>
+  </div>
+
+  <!-- Additional sections from your existing sidebar -->
+  <ng-container *ngIf="currentUser">
+    <!-- Gamification Section -->
+    <div class="sidebar-section">
+      <h3 class="sidebar-header">Gamification</h3>
+      <a mat-list-item routerLink="/gamification/badges" routerLinkActive="active">
+        <mat-icon matListIcon>emoji_events</mat-icon>
+        <span matLine>Badges</span>
+      </a>
+      <a mat-list-item routerLink="/gamification/certificates" routerLinkActive="active">
+        <mat-icon matListIcon>card_membership</mat-icon>
+        <span matLine>Certificates</span>
+      </a>
+    </div>
+
+    <!-- Role-based sections -->
+    <ng-container *ngIf="isStudent">
+      <div class="sidebar-section">
+        <h3 class="sidebar-header">Student</h3>
+        <a mat-list-item routerLink="/student/my-courses" routerLinkActive="active">
+          <mat-icon matListIcon>book</mat-icon>
+          <span matLine>My Courses</span>
+        </a>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="isTeacher || isAdmin">
+      <div class="sidebar-section">
+        <h3 class="sidebar-header>{{isTeacher ? 'Teacher' : 'Admin'}}"></h3>
+        <a mat-list-item routerLink="/{{isTeacher ? 'teacher' : 'admin'}}/courses" routerLinkActive="active">
+          <mat-icon matListIcon>library_books</mat-icon>
+          <span matLine>Course Management</span>
+        </a>
+      </div>
+    </ng-container>
+  </ng-container>
+</mat-nav-list>

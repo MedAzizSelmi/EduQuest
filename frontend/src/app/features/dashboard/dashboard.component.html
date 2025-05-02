@@ -1,0 +1,23 @@
+<div class="dashboard-container">
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!loading && dashboard">
+    <!-- Student Dashboard -->
+    <app-student-dashboard *ngIf="currentUser?.role === 'Student'" [dashboard]="dashboard"></app-student-dashboard>
+
+    <!-- Teacher Dashboard -->
+    <app-teacher-dashboard *ngIf="currentUser?.role === 'Teacher'" [dashboard]="dashboard"></app-teacher-dashboard>
+
+    <!-- Admin Dashboard -->
+    <app-admin-dashboard *ngIf="currentUser?.role === 'Admin'" [dashboard]="dashboard"></app-admin-dashboard>
+  </div>
+
+  <div *ngIf="!loading && !dashboard" class="no-data">
+    <mat-icon>error_outline</mat-icon>
+    <h2>No dashboard data available</h2>
+    <p>Please try again later or contact support if the problem persists.</p>
+    <button mat-raised-button color="primary" (click)="loadDashboard()">Retry</button>
+  </div>
+</div>

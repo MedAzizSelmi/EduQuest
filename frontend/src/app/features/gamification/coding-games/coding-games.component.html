@@ -1,0 +1,68 @@
+<div class="coding-games-container">
+  <h1>Coding Games & Challenges</h1>
+
+  <!-- Category Filter -->
+  <div class="game-categories">
+    <mat-button-toggle-group [value]="selectedCategory" (change)="filterByCategory($event.value)">
+      <mat-button-toggle *ngFor="let category of categories" [value]="category">
+        {{category}}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Games Grid -->
+  <div *ngIf="!loading" class="games-grid">
+    <mat-card *ngFor="let game of getFilteredGames()" class="game-card">
+      <div class="game-image">
+        <img [src]="game.imageUrl || '/assets/images/coding-game-placeholder.jpg'" [alt]="game.title">
+        <div class="difficulty-badge" [ngClass]="game.difficulty.toLowerCase()">
+          {{game.difficulty}}
+        </div>
+      </div>
+      
+      <mat-card-header>
+        <mat-card-title>{{game.title}}</mat-card-title>
+        <mat-card-subtitle>{{game.category}}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <p>{{game.description}}</p>
+        
+        <div class="game-meta">
+          <div class="points">
+            <mat-icon>stars</mat-icon>
+            <span>{{game.pointsToEarn}} points</span>
+          </div>
+          
+          <div class="completion-time">
+            <mat-icon>timer</mat-icon>
+            <span>~{{game.estimatedTime}} min</span>
+          </div>
+          
+          <div class="players-completed">
+            <mat-icon>people</mat-icon>
+            <span>{{game.playersCompleted}} completed</span>
+          </div>
+        </div>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="playGame(game)">
+          <mat-icon>play_arrow</mat-icon>
+          PLAY NOW
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- No Games Message -->
+    <div *ngIf="getFilteredGames().length === 0" class="no-games">
+      <mat-icon>code</mat-icon>
+      <p>No coding games found in this category.</p>
+    </div>
+  </div>
+</div>

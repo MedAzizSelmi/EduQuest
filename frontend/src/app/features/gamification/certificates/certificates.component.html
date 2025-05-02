@@ -1,0 +1,74 @@
+<div class="certificates-container">
+  <h1>My Certificates</h1>
+
+  <!-- Search -->
+  <div class="search-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Search Certificates</mat-label>
+      <input matInput [(ngModel)]="searchTerm" placeholder="Search by title or course" (keyup.enter)="onSearch()">
+      <button mat-icon-button matSuffix (click)="onSearch()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Certificates Grid -->
+  <div *ngIf="!loading" class="certificates-grid">
+    <mat-card *ngFor="let certificate of filteredCertificates" class="certificate-card">
+      <div class="certificate-preview" (click)="viewCertificate(certificate)">
+        <img [src]="certificate.certificateUrl || '/assets/images/certificate-placeholder.jpg'" [alt]="certificate.title">
+        <div class="preview-overlay">
+          <mat-icon>visibility</mat-icon>
+          <span>View Certificate</span>
+        </div>
+      </div>
+      
+      <mat-card-header>
+        <mat-card-title>{{certificate.title}}</mat-card-title>
+        <mat-card-subtitle>{{certificate.courseTitle}}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <p>{{certificate.description}}</p>
+        
+        <div class="certificate-meta">
+          <div class="issue-date">
+            <mat-icon>event</mat-icon>
+            <span>Issued on {{certificate.issuedDate | date}}</span>
+          </div>
+          
+          <div class="verification">
+            <mat-icon>verified</mat-icon>
+            <span>Verification Code: {{certificate.verificationCode}}</span>
+          </div>
+        </div>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="viewCertificate(certificate)">
+          <mat-icon>visibility</mat-icon>
+          VIEW
+        </button>
+        <button mat-button color="accent" (click)="downloadCertificate(certificate)">
+          <mat-icon>download</mat-icon>
+          DOWNLOAD
+        </button>
+        <button mat-button color="warn" (click)="shareCertificate(certificate)">
+          <mat-icon>share</mat-icon>
+          SHARE
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- No Certificates Message -->
+    <div *ngIf="filteredCertificates.length === 0" class="no-certificates">
+      <mat-icon>card_membership</mat-icon>
+      <p>No certificates found. Complete courses to earn certificates!</p>
+    </div>
+  </div>
+</div>

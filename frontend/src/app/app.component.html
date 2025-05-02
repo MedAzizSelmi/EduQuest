@@ -1,0 +1,15 @@
+<div class="app-container">
+  <app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>
+
+  <mat-sidenav-container class="sidenav-container" [style.marginLeft.px]="sidebarOpen ? 0 : -250">
+    <mat-sidenav #sidenav [mode]="'side'" [opened]="sidebarOpen" class="sidenav">
+      <app-sidebar [isOpen]="sidebarOpen"></app-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+      <div class="content-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

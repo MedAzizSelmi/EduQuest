@@ -1,0 +1,69 @@
+<div class="quiz-edit-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Edit Quiz</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <div *ngIf="loading" class="loading-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+      
+      <form *ngIf="!loading" [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Quiz Title</mat-label>
+          <input matInput formControlName="title" placeholder="Enter quiz title">
+          <mat-error *ngIf="f['title'].errors?.['required']">Title is required</mat-error>
+          <mat-error *ngIf="f['title'].errors?.['minlength']">Title must be at least 5 characters</mat-error>
+          <mat-error *ngIf="f['title'].errors?.['maxlength']">Title cannot exceed 100 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" placeholder="Enter quiz description" rows="4"></textarea>
+          <mat-error *ngIf="f['description'].errors?.['required']">Description is required</mat-error>
+          <mat-error *ngIf="f['description'].errors?.['minlength']">Description must be at least 20 characters</mat-error>
+        </mat-form-field>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="one-third-width">
+            <mat-label>Time Limit (minutes)</mat-label>
+            <input matInput type="number" formControlName="timeLimit" min="1">
+            <mat-error *ngIf="f['timeLimit'].errors?.['required']">Time limit is required</mat-error>
+            <mat-error *ngIf="f['timeLimit'].errors?.['min']">Time limit must be at least 1 minute</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="one-third-width">
+            <mat-label>Passing Score (%)</mat-label>
+            <input matInput type="number" formControlName="passingScore" min="1" max="100">
+            <mat-error *ngIf="f['passingScore'].errors?.['required']">Passing score is required</mat-error>
+            <mat-error *ngIf="f['passingScore'].errors?.['min']">Passing score must be at least 1%</mat-error>
+            <mat-error *ngIf="f['passingScore'].errors?.['max']">Passing score cannot exceed 100%</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="one-third-width">
+            <mat-label>Points to Earn</mat-label>
+            <input matInput type="number" formControlName="pointsToEarn" min="0">
+            <mat-error *ngIf="f['pointsToEarn'].errors?.['required']">Points value is required</mat-error>
+            <mat-error *ngIf="f['pointsToEarn'].errors?.['min']">Points cannot be negative</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="question-management">
+          <button mat-raised-button color="accent" type="button" (click)="manageQuestions()">
+            <mat-icon>help</mat-icon>
+            Manage Questions
+          </button>
+        </div>
+
+        <div class="form-actions">
+          <button mat-button type="button" (click)="onCancel()">Cancel</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="loading">
+            <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>
+            <span *ngIf="!loading">Save Changes</span>
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

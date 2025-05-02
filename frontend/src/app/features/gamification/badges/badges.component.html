@@ -1,0 +1,95 @@
+<div class="badges-container">
+  <h1>My Badges</h1>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Badge Stats -->
+  <div *ngIf="!loading" class="badge-stats">
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value" *ngFor="let eb of earnedBadges">{{eb.name}}</div>
+        <div class="stat-label">Badges Earned</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value" *ngFor="let eb of userBadges">{{eb.name}}</div>
+        <div class="stat-label">Badges Available</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value" let *ngFor="let eb of earnedBadges">{{ eb.name}} : {{ eb.points}}</div>
+        <div class="stat-label">Points from Badges</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Badge Categories -->
+  <div *ngIf="!loading" class="badge-categories">
+    <mat-button-toggle-group [value]="selectedCategory" (change)="filterByCategory($event.value)">
+      <mat-button-toggle value="All">All</mat-button-toggle>
+      <mat-button-toggle value="Earned">Earned</mat-button-toggle>
+      <mat-button-toggle value="Unearned">Unearned</mat-button-toggle>
+      <mat-button-toggle *ngFor="let category of badgeCategories" [value]="category.name">
+        {{category.name}}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <!-- Badge Grid -->
+  <div *ngIf="!loading" class="badge-grid">
+    <mat-card *ngFor="let badge of getFilteredBadges()" class="badge-card" [class.earned]="badge.isEarned">
+      <div class="badge-image">
+        <img [src]="badge.imageUrl" [alt]="badge.name">
+        <div *ngIf="badge.isEarned" class="earned-overlay">
+          <mat-icon>check_circle</mat-icon>
+        </div>
+      </div>
+
+      <mat-card-header>
+        <mat-card-title>{{badge.name}}</mat-card-title>
+        <mat-card-subtitle>{{badge.category}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>{{badge.description}}</p>
+
+        <div class="badge-meta">
+          <div class="points">
+            <mat-icon>stars</mat-icon>
+            <span>{{badge.points}} points</span>
+          </div>
+
+          <div *ngIf="badge.isEarned" class="earned-date">
+            <mat-icon>event</mat-icon>
+            <span>Earned on {{badge.earnedDate | date}}</span>
+          </div>
+
+          <div *ngIf="!badge.isEarned" class="badge-progress">
+            <span>Progress: {{getBadgeProgress(badge)}}%</span>
+            <mat-progress-bar mode="determinate" [value]="getBadgeProgress(badge)"></mat-progress-bar>
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button color="primary" [matTooltip]="badge.criteria">
+          <mat-icon>info</mat-icon>
+          HOW TO EARN
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- No Badges Message -->
+    <div *ngIf="getFilteredBadges().length === 0" class="no-badges">
+      <mat-icon>emoji_events</mat-icon>
+      <p>No badges found in this category.</p>
+    </div>
+  </div>
+</div>

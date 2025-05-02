@@ -1,0 +1,145 @@
+<div class="exam-detail-container">
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!loading && exam" class="exam-content">
+    <div class="header">
+      <button mat-icon-button (click)="goBackToCourse()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <h1>{{exam.title}}</h1>
+      <div class="header-actions">
+        <button *ngIf="isTeacherOrAdmin" mat-raised-button color="accent" (click)="editExam()">
+          <mat-icon>edit</mat-icon>
+          Edit Exam
+        </button>
+        <button *ngIf="!isTeacherOrAdmin && isExamActive()" mat-raised-button color="primary" (click)="takeExam()">
+          <mat-icon>play_arrow</mat-icon>
+          Take Exam
+        </button>
+      </div>
+    </div>
+
+    <div class="exam-status-banner" [ngClass]="{
+      'active': isExamActive(),
+      'upcoming': isExamUpcoming(),
+      'expired': isExamExpired()
+    }">
+      <mat-icon>{{isExamActive() ? 'event_available' : isExamUpcoming() ? 'event' : 'event_busy'}}</mat-icon>
+      <span *ngIf="isExamActive()">This exam is currently active and will end on {{exam.endDate | date:'medium'}}</span>
+      <span *ngIf="isExamUpcoming()">This exam will be available in {{getTimeUntilStart()}}</span>
+      <span *ngIf="isExamExpired()">This exam has ended on {{exam.endDate | date:'medium'}}</span>
+    </div>
+
+    <mat-card class="exam-info-card">
+      <mat-card-header>
+        <mat-card-title>Exam Information</mat-card-title>
+        <mat-chip-listbox>
+          <mat-chip *ngIf="exam.isFinal" color="warn" selected>Final Exam</mat-chip>
+        </mat-chip-listbox>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{exam.description}}</p>
+
+        <div class="exam-meta">
+          <div class="meta-item">
+            <mat-icon>event</mat-icon>
+            <span><strong>Start Date:</strong> {{exam.startDate | date:'medium'}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>event</mat-icon>
+            <span><strong>End Date:</strong> {{exam.endDate | date:'medium'}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>timer</mat-icon>
+            <span><strong>Time Limit:</strong> {{exam.timeLimit}} minutes</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>help</mat-icon>
+            <span><strong>Questions:</strong> {{exam.questionsCount}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>stars</mat-icon>
+            <span><strong>Points to Earn:</strong> {{exam.pointsToEarn}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>check_circle</mat-icon>
+            <span><strong>Passing Score:</strong> {{exam.passingScore}}%</span>
+          </div>
+          <div class="meta-item" *ngIf="exam.attemptsAllowed">
+            <mat-icon>replay</mat-icon>
+            <span><strong>Attempts Allowed:</strong> {{exam.attemptsAllowed}}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Questions Preview (for teachers/admins) -->
+    <div *ngIf="isTeacherOrAdmin && exam.questions && exam.questions.length > 0" class="questions-section">
+      <h2>Questions</h2>
+
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let question of exam.questions; let i = index">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Question {{i + 1}}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{question.type}} - {{question.points}} points
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <p>{{question.text}}</p>
+
+          <div *ngIf="question.answers && question.answers.length > 0" class="answers-list">
+            <h3>Answers:</h3>
+            <mat-list>
+              <mat-list-item *ngFor="let answer of question.answers">
+                <mat-icon matListIcon [color]="answer.isCorrect ? 'primary' : ''">
+                  {{answer.isCorrect ? 'check_circle' : 'radio_button_unchecked'}}
+                </mat-icon>
+                <div matLine>{{answer.text}}</div>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <!-- Take Exam Section -->
+    <div *ngIf="!isTeacherOrAdmin" class="take-exam-section">
+      <mat-card>
+        <mat-card-content>
+          <div *ngIf="isExamActive()">
+            <p>This exam is currently active. You have {{exam.timeLimit}} minutes to complete it once you start.</p>
+            <p *ngIf="exam.attemptsAllowed">You are allowed {{exam.attemptsAllowed}} attempts for this exam.</p>
+            <button mat-raised-button color="primary" (click)="takeExam()">
+              <mat-icon>play_arrow</mat-icon>
+              Start Exam
+            </button>
+          </div>
+
+          <div *ngIf="isExamUpcoming()">
+            <p>This exam is not yet available. It will be available on {{exam.startDate | date:'medium'}}.</p>
+            <p>Please check back later.</p>
+          </div>
+
+          <div *ngIf="isExamExpired()">
+            <p>This exam has ended. It was available until {{exam.endDate | date:'medium'}}.</p>
+            <p>Please contact your instructor if you have any questions.</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="!loading && !exam" class="error-message">
+    <mat-icon>error</mat-icon>
+    <h2>Exam Not Found</h2>
+    <p>The exam you're looking for doesn't exist or you don't have permission to view it.</p>
+    <button mat-raised-button color="primary" routerLink="/courses">Back to Courses</button>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="quiz-detail-container">
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!loading && quiz" class="quiz-content">
+    <div class="header">
+      <button mat-icon-button (click)="goBackToCourse()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <h1>{{quiz.title}}</h1>
+      <div class="header-actions">
+        <button *ngIf="isTeacherOrAdmin" mat-raised-button color="accent" (click)="editQuiz()">
+          <mat-icon>edit</mat-icon>
+          Edit Quiz
+        </button>
+        <button *ngIf="!isTeacherOrAdmin" mat-raised-button color="primary" (click)="takeQuiz()">
+          <mat-icon>play_arrow</mat-icon>
+          Take Quiz
+        </button>
+      </div>
+    </div>
+
+    <mat-card class="quiz-info-card">
+      <mat-card-header>
+        <mat-card-title>Quiz Information</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{quiz.description}}</p>
+        
+        <div class="quiz-meta">
+          <div class="meta-item">
+            <mat-icon>timer</mat-icon>
+            <span><strong>Time Limit:</strong> {{quiz.timeLimit}} minutes</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>help</mat-icon>
+            <span><strong>Questions:</strong> {{quiz.questionsCount}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>stars</mat-icon>
+            <span><strong>Points to Earn:</strong> {{quiz.pointsToEarn}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>check_circle</mat-icon>
+            <span><strong>Passing Score:</strong> {{quiz.passingScore}}%</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Questions Preview (for teachers/admins) -->
+    <div *ngIf="isTeacherOrAdmin && quiz.questions && quiz.questions.length > 0" class="questions-section">
+      <h2>Questions</h2>
+      
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let question of quiz.questions; let i = index">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Question {{i + 1}}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{question.type}} - {{question.points}} points
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          
+          <p>{{question.text}}</p>
+          
+          <div *ngIf="question.answers && question.answers.length > 0" class="answers-list">
+            <h3>Answers:</h3>
+            <mat-list>
+              <mat-list-item *ngFor="let answer of question.answers">
+                <mat-icon matListIcon [color]="answer.isCorrect ? 'primary' : ''">
+                  {{answer.isCorrect ? 'check_circle' : 'radio_button_unchecked'}}
+                </mat-icon>
+                <div matLine>{{answer.text}}</div>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <!-- Take Quiz Button -->
+    <div *ngIf="!isTeacherOrAdmin" class="take-quiz-section">
+      <mat-card>
+        <mat-card-content>
+          <p>Ready to test your knowledge? Click the button below to start the quiz.</p>
+          <p><strong>Note:</strong> You will have {{quiz.timeLimit}} minutes to complete this quiz once you start.</p>
+          <button mat-raised-button color="primary" (click)="takeQuiz()">
+            <mat-icon>play_arrow</mat-icon>
+            Start Quiz
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="!loading && !quiz" class="error-message">
+    <mat-icon>error</mat-icon>
+    <h2>Quiz Not Found</h2>
+    <p>The quiz you're looking for doesn't exist or you don't have permission to view it.</p>
+    <button mat-raised-button color="primary" routerLink="/courses">Back to Courses</button>
+  </div>
+</div>

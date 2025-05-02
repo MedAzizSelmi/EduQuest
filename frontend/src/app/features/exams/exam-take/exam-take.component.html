@@ -1,0 +1,192 @@
+<div class="exam-take-container">
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Exam Introduction -->
+  <div *ngIf="!loading && exam && !started && !completed" class="exam-intro">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{exam.title}}</mat-card-title>
+        <mat-chip-listbox>
+          <mat-chip *ngIf="exam.isFinal" color="warn" selected>Final Exam</mat-chip>
+        </mat-chip-listbox>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{exam.description}}</p>
+
+        <div class="exam-meta">
+          <div class="meta-item">
+            <mat-icon>timer</mat-icon>
+            <span><strong>Time Limit:</strong> {{exam.timeLimit}} minutes</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>help</mat-icon>
+            <span><strong>Questions:</strong> {{exam.questionsCount}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>check_circle</mat-icon>
+            <span><strong>Passing Score:</strong> {{exam.passingScore}}%</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>stars</mat-icon>
+            <span><strong>Points to Earn:</strong> {{exam.pointsToEarn}}</span>
+          </div>
+        </div>
+
+        <div class="exam-instructions">
+          <h3>Instructions:</h3>
+          <ul>
+            <li>You have {{exam.timeLimit}} minutes to complete this exam.</li>
+            <li>You must score at least {{exam.passingScore}}% to pass.</li>
+            <li>Read each question carefully before answering.</li>
+            <li>Once you start the exam, you cannot pause it.</li>
+            <li>Click "Start Exam" when you're ready to begin.</li>
+          </ul>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="goBackToCourse()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="startExam()">Start Exam</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Exam Questions -->
+  <div *ngIf="!loading && exam && started && !completed" class="exam-questions">
+    <div class="exam-header">
+      <h1>{{exam.title}}</h1>
+      <div class="timer" [ngClass]="{'warning': timeLeft < 300}">
+        <mat-icon>timer</mat-icon>
+        <span>{{formatTimeLeft()}}</span>
+      </div>
+    </div>
+
+    <form [formGroup]="examForm" (ngSubmit)="submitExam()">
+      <div formArrayName="answers">
+        <mat-card *ngFor="let question of exam.questions; let i = index" class="question-card">
+          <mat-card-header>
+            <mat-card-title>Question {{i + 1}}</mat-card-title>
+            <mat-card-subtitle>{{question.points}} points</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="question-text">{{question.text}}</p>
+
+            <div [formGroupName]="i" class="answer-section">
+              <!-- Multiple Choice Question -->
+              <div *ngIf="question.type === 'MultipleChoice'">
+                <mat-selection-list formControlName="answerIds">
+                  <mat-list-option *ngFor="let answer of question.answers" [value]="answer.id">
+                    {{answer.text}}
+                  </mat-list-option>
+                </mat-selection-list>
+              </div>
+
+              <!-- True/False Question -->
+              <div *ngIf="question.type === 'TrueFalse'">
+                <mat-radio-group formControlName="answerIds">
+                  <mat-radio-button *ngFor="let answer of question.answers" [value]="[answer.id]" class="true-false-option">
+                    {{answer.text}}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+
+              <!-- Short Answer Question -->
+              <div *ngIf="question.type === 'ShortAnswer'">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Your Answer</mat-label>
+                  <input matInput formControlName="textAnswer" placeholder="Type your answer here">
+                </mat-form-field>
+              </div>
+
+              <!-- Essay Question -->
+              <div *ngIf="question.type === 'Essay'">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Your Answer</mat-label>
+                  <textarea matInput formControlName="textAnswer" placeholder="Type your answer here" rows="5"></textarea>
+                </mat-form-field>
+              </div>
+
+              <!-- Coding Question -->
+              <div *ngIf="question.type === 'Coding'">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Your Code</mat-label>
+                  <textarea matInput formControlName="codeAnswer" placeholder="Write your code here" rows="10" class="code-editor"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="submit-section">
+        <button mat-raised-button color="warn" type="button" (click)="goBackToCourse()">Quit Exam</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="submitting">
+          <mat-spinner diameter="20" *ngIf="submitting"></mat-spinner>
+          <span *ngIf="!submitting">Submit Exam</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Exam Results -->
+  <div *ngIf="!loading && completed && examResult" class="exam-results">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Exam Results</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="result-header" [ngClass]="{'passed': examResult.isPassed, 'failed': !examResult.isPassed}">
+          <mat-icon>{{examResult.isPassed ? 'check_circle' : 'cancel'}}</mat-icon>
+          <h2>{{examResult.isPassed ? 'Congratulations! You passed!' : 'Sorry, you did not pass.'}}</h2>
+        </div>
+
+        <div class="result-details">
+          <div class="result-item">
+            <span class="label">Score:</span>
+            <span class="value">{{examResult.score}}%</span>
+          </div>
+          <div class="result-item">
+            <span class="label">Passing Score:</span>
+            <span class="value">{{exam?.passingScore}}%</span>
+          </div>
+          <div class="result-item">
+            <span class="label">Points Earned:</span>
+            <span class="value">{{examResult.pointsEarned}}</span>
+          </div>
+          <div class="result-item">
+            <span class="label">Time Taken:</span>
+            <span class="value">
+              {{(examResult.endTime - examResult.startTime) / 60000 | number:'1.0-0'}} minutes
+            </span>
+          </div>
+          <div class="result-item">
+            <span class="label">Attempts:</span>
+            <span class="value">{{examResult.attemptsCount}} / {{exam?.attemptsAllowed}}</span>
+          </div>
+        </div>
+
+        <div *ngIf="exam?.isFinal && examResult.isPassed" class="certificate-section">
+          <h3>Certificate Earned</h3>
+          <p>You have earned a certificate for completing this course's final exam.</p>
+          <button mat-raised-button color="primary">
+            <mat-icon>card_membership</mat-icon>
+            View Certificate
+          </button>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="goBackToCourse()">Return to Course</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="!loading && !exam" class="error-message">
+    <mat-icon>error</mat-icon>
+    <h2>Exam Not Found</h2>
+    <p>The exam you're looking for doesn't exist or you don't have permission to view it.</p>
+    <button mat-raised-button color="primary" routerLink="/courses">Back to Courses</button>
+  </div>
+</div>

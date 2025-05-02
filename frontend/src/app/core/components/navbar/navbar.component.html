@@ -1,0 +1,85 @@
+<mat-toolbar color="primary" class="navbar">
+  <button mat-icon-button (click)="onToggleSidebar()" class="menu-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <a routerLink="/" class="letter-link">
+    <img src="/EduQuestLetter.png" alt="EduQuestLetter" class="letter-image">
+  </a>
+
+  <span class="spacer"></span>
+
+  <div class="nav-links">
+    <!--<a mat-button color="accent" routerLink="/courses">Courses</a>-->
+
+    <ng-container *ngIf="currentUser">
+      <a mat-button routerLink="/courses">Courses</a>
+
+      <ng-container *ngIf="isStudent">
+        <a mat-button routerLink="/student">Dashboard</a>
+      </ng-container>
+
+      <ng-container *ngIf="isTeacher">
+        <a mat-button routerLink="/teacher">Dashboard</a>
+      </ng-container>
+
+      <ng-container *ngIf="isAdmin">
+        <a mat-button routerLink="/admin">Dashboard</a>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="user-actions">
+    <ng-container *ngIf="!currentUser">
+      <a mat-button color="accent" routerLink="/login">Login</a>
+      <a mat-raised-button color="accent" routerLink="/register">Register</a>
+    </ng-container>
+
+    <ng-container *ngIf="currentUser">
+      <button mat-raised-button color="accent" [matMenuTriggerFor]="userMenu" class="user-menu-trigger">
+        <div class="user-avatar" *ngIf="currentUser.profilePicture">
+          <img [src]="currentUser.profilePicture" alt="User avatar">
+        </div>
+        <div class="user-avatar" *ngIf="!currentUser.profilePicture">
+          <mat-icon>account_circle</mat-icon>
+        </div>
+        <span class="username">{{currentUser.firstName}} {{currentUser.lastName}}</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+
+      <mat-menu #userMenu="matMenu">
+        <div class="user-menu-header">
+          <div class="user-info">
+            <div class="user-name">{{currentUser.firstName}} {{currentUser.lastName}}</div>
+            <div class="user-email">{{currentUser.email}}</div>
+          </div>
+          <div class="user-level">
+            <div class="level-badge">{{currentUser.level}}</div>
+            <div class="level-text">Level</div>
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <button mat-menu-item routerLink="/profile">
+          <mat-icon>person</mat-icon>
+          <span>My Profile</span>
+        </button>
+
+        <button mat-menu-item routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          <span>Dashboard</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </ng-container>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,179 @@
+.quiz-take-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.quiz-meta {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  
+  mat-icon {
+    margin-right: 10px;
+  }
+}
+
+.quiz-instructions {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .timer {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    
+    mat-icon {
+      margin-right: 8px;
+    }
+    
+    &.warning {
+      background-color: #ffebee;
+      color: #f44336;
+    }
+  }
+}
+
+.question-card {
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.answer-section {
+  margin-top: 15px;
+}
+
+.true-false-option {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.code-editor {
+  font-family: monospace;
+}
+
+.submit-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.quiz-results {
+  .result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    
+    &.passed {
+      background-color: #e8f5e9;
+      color: #4caf50;
+    }
+    
+    &.failed {
+      background-color: #ffebee;
+      color: #f44336;
+    }
+    
+    mat-icon {
+      font-size: 36px;
+      height: 36px;
+      width: 36px;
+      margin-right: 15px;
+    }
+    
+    h2 {
+      margin: 0;
+    }
+  }
+  
+  .result-details {
+    margin: 20px 0;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    
+    .label {
+      font-weight: 500;
+    }
+    
+    .value {
+      font-weight: 700;
+    }
+  }
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+  
+  mat-icon {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+    margin-bottom: 20px;
+    color: #f44336;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+}

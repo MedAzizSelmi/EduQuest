@@ -1,0 +1,67 @@
+<div class="course-list-container">
+  <!-- Added extra wrapper div with padding -->
+  <div class="content-wrapper">
+    <div class="header">
+      <div class="header-content">
+        <h1 class="page-title">Courses</h1>
+        <p class="subtitle">Browse and enroll in available courses</p>
+      </div>
+
+      <button *ngIf="isTeacherOrAdmin" mat-raised-button color="primary"
+              routerLink="/courses/create" class="create-btn">
+        <mat-icon>add</mat-icon>
+        Create Course
+      </button>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="filters-container">
+      <mat-form-field appearance="outline" class="search-field">
+        <mat-label>Search Courses</mat-label>
+        <input matInput [(ngModel)]="searchTerm" placeholder="Search by title, description">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+      <div class="filter-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Category</mat-label>
+          <mat-select [(ngModel)]="categoryFilter">
+            <mat-option value="All">All Categories</mat-option>
+            <mat-option *ngFor="let category of categories" [value]="category">
+              {{category}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Level</mat-label>
+          <mat-select [(ngModel)]="levelFilter">
+            <mat-option value="All">All Levels</mat-option>
+            <mat-option value="Beginner">Beginner</mat-option>
+            <mat-option value="Intermediate">Intermediate</mat-option>
+            <mat-option value="Advanced">Advanced</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-stroked-button (click)="resetFilters()" class="reset-btn">
+          Reset Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- No Results Section -->
+    <div *ngIf="filteredCourses.length === 0" class="no-courses">
+      <mat-icon class="no-courses-icon">search_off</mat-icon>
+      <h3>No courses found</h3>
+      <p>Try adjusting your search or filters</p>
+      <button mat-raised-button color="primary" (click)="resetFilters()">
+        Reset All Filters
+      </button>
+    </div>
+
+    <!-- Course Grid -->
+    <div class="course-grid">
+      <!-- Your course cards here -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="quiz-list-container">
+  <div class="header">
+    <button mat-icon-button (click)="goBackToCourse()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h1>Course Quizzes</h1>
+    <button *ngIf="isTeacherOrAdmin" mat-raised-button color="primary" (click)="createQuiz()">
+      <mat-icon>add</mat-icon>
+      Create Quiz
+    </button>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Quiz List -->
+  <div *ngIf="!loading" class="quiz-grid">
+    <mat-card *ngFor="let quiz of quizzes" class="quiz-card">
+      <mat-card-header>
+        <mat-card-title>{{quiz.title}}</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <p>{{quiz.description}}</p>
+        
+        <div class="quiz-meta">
+          <div class="meta-item">
+            <mat-icon>timer</mat-icon>
+            <span>{{quiz.timeLimit}} minutes</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>help</mat-icon>
+            <span>{{quiz.questionsCount}} questions</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>stars</mat-icon>
+            <span>{{quiz.pointsToEarn}} points</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{quiz.passingScore}}% to pass</span>
+          </div>
+        </div>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="viewQuiz(quiz)">VIEW DETAILS</button>
+        <button *ngIf="isTeacherOrAdmin" mat-button color="accent" (click)="editQuiz(quiz)">EDIT</button>
+        <button *ngIf="isTeacherOrAdmin" mat-button color="warn" (click)="deleteQuiz(quiz)">DELETE</button>
+        <button *ngIf="!isTeacherOrAdmin" mat-raised-button color="primary" (click)="takeQuiz(quiz)">TAKE QUIZ</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- No Quizzes Message -->
+    <div *ngIf="quizzes.length === 0" class="no-quizzes">
+      <mat-icon>quiz</mat-icon>
+      <p>No quizzes available for this course.</p>
+      <button *ngIf="isTeacherOrAdmin" mat-raised-button color="primary" (click)="createQuiz()">
+        Create First Quiz
+      </button>
+    </div>
+  </div>
+</div>

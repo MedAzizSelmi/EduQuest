@@ -1,0 +1,179 @@
+<div class="quiz-take-container">
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Quiz Introduction -->
+  <div *ngIf="!loading && quiz && !started && !completed" class="quiz-intro">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{quiz.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{quiz.description}}</p>
+        
+        <div class="quiz-meta">
+          <div class="meta-item">
+            <mat-icon>timer</mat-icon>
+            <span><strong>Time Limit:</strong> {{quiz.timeLimit}} minutes</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>help</mat-icon>
+            <span><strong>Questions:</strong> {{quiz.questionsCount}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>check_circle</mat-icon>
+            <span><strong>Passing Score:</strong> {{quiz.passingScore}}%</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>stars</mat-icon>
+            <span><strong>Points to Earn:</strong> {{quiz.pointsToEarn}}</span>
+          </div>
+        </div>
+        
+        <div class="quiz-instructions">
+          <h3>Instructions:</h3>
+          <ul>
+            <li>You have {{quiz.timeLimit}} minutes to complete this quiz.</li>
+            <li>You must score at least {{quiz.passingScore}}% to pass.</li>
+            <li>Read each question carefully before answering.</li>
+            <li>Click "Start Quiz" when you're ready to begin.</li>
+          </ul>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="goBackToCourse()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="startQuiz()">Start Quiz</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Quiz Questions -->
+  <div *ngIf="!loading && quiz && started && !completed" class="quiz-questions">
+    <div class="quiz-header">
+      <h1>{{quiz.title}}</h1>
+      <div class="timer" [ngClass]="{'warning': timeLeft < 60}">
+        <mat-icon>timer</mat-icon>
+        <span>{{formatTimeLeft()}}</span>
+      </div>
+    </div>
+    
+    <form [formGroup]="quizForm" (ngSubmit)="submitQuiz()">
+      <div formArrayName="answers">
+        <mat-card *ngFor="let question of quiz.questions; let i = index" class="question-card">
+          <mat-card-header>
+            <mat-card-title>Question {{i + 1}}</mat-card-title>
+            <mat-card-subtitle>{{question.points}} points</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="question-text">{{question.text}}</p>
+            
+            <div [formGroupName]="i" class="answer-section">
+              <!-- Multiple Choice Question -->
+              <div *ngIf="question.type === 'MultipleChoice'">
+                <mat-selection-list formControlName="answerIds">
+                  <mat-list-option *ngFor="let answer of question.answers" [value]="answer.id">
+                    {{answer.text}}
+                  </mat-list-option>
+                </mat-selection-list>
+              </div>
+              
+              <!-- True/False Question -->
+              <div *ngIf="question.type === 'TrueFalse'">
+                <mat-radio-group formControlName="answerIds">
+                  <mat-radio-button *ngFor="let answer of question.answers" [value]="[answer.id]" class="true-false-option">
+                    {{answer.text}}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+              
+              <!-- Short Answer Question -->
+              <div *ngIf="question.type === 'ShortAnswer'">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Your Answer</mat-label>
+                  <input matInput formControlName="textAnswer" placeholder="Type your answer here">
+                </mat-form-field>
+              </div>
+              
+              <!-- Essay Question -->
+              <div *ngIf="question.type === 'Essay'">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Your Answer</mat-label>
+                  <textarea matInput formControlName="textAnswer" placeholder="Type your answer here" rows="5"></textarea>
+                </mat-form-field>
+              </div>
+              
+              <!-- Coding Question -->
+              <div *ngIf="question.type === 'Coding'">
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Your Code</mat-label>
+                  <textarea matInput formControlName="codeAnswer" placeholder="Write your code here" rows="10" class="code-editor"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+      <div class="submit-section">
+        <button mat-raised-button color="warn" type="button" (click)="goBackToCourse()">Quit Quiz</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="submitting">
+          <mat-spinner diameter="20" *ngIf="submitting"></mat-spinner>
+          <span *ngIf="!submitting">Submit Quiz</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Quiz Results -->
+  <div *ngIf="!loading && completed && quizResult" class="quiz-results">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Quiz Results</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="result-header" [ngClass]="{'passed': quizResult.isPassed, 'failed': !quizResult.isPassed}">
+          <mat-icon>{{quizResult.isPassed ? 'check_circle' : 'cancel'}}</mat-icon>
+          <h2>{{quizResult.isPassed ? 'Congratulations! You passed!' : 'Sorry, you did not pass.'}}</h2>
+        </div>
+        
+        <div class="result-details">
+          <div class="result-item">
+            <span class="label">Score:</span>
+            <span class="value">{{quizResult.score}}%</span>
+          </div>
+          <div class="result-item">
+            <span class="label">Passing Score:</span>
+            <span class="value">{{quiz?.passingScore}}%</span>
+          </div>
+          <div class="result-item">
+            <span class="label">Points Earned:</span>
+            <span class="value">{{quizResult.pointsEarned}}</span>
+          </div>
+          <div class="result-item">
+            <span class="label">Time Taken:</span>
+            <span class="value">
+              {{(quizResult.endTime - quizResult.startTime) / 60000 | number:'1.0-0'}} minutes
+            </span>
+          </div>
+          <div class="result-item">
+            <span class="label">Attempts:</span>
+            <span class="value">{{quizResult.attemptsCount}}</span>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="goBackToCourse()">Return to Course</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="!loading && !quiz" class="error-message">
+    <mat-icon>error</mat-icon>
+    <h2>Quiz Not Found</h2>
+    <p>The quiz you're looking for doesn't exist or you don't have permission to view it.</p>
+    <button mat-raised-button color="primary" routerLink="/courses">Back to Courses</button>
+  </div>
+</div>

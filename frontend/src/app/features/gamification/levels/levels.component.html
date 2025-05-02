@@ -1,0 +1,181 @@
+<div class="levels-container">
+  <h1>My Level & Progress</h1>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Level Details -->
+  <div *ngIf="!loading && levelDetails" class="level-details">
+    <mat-card class="level-card">
+      <mat-card-content>
+        <div class="level-header">
+          <div class="level-badge">
+            <div class="level-number">{{levelDetails.currentLevel}}</div>
+            <div class="level-label">Level</div>
+          </div>
+
+          <div class="level-info">
+            <h2>{{levelDetails.levelTitle}}</h2>
+            <p>{{levelDetails.levelDescription}}</p>
+          </div>
+        </div>
+
+        <div class="level-progress">
+          <div class="progress-bar-container">
+            <mat-progress-bar mode="determinate" [value]="getProgressToNextLevel()"></mat-progress-bar>
+            <div class="progress-labels">
+              <span>Level {{levelDetails.currentLevel}}</span>
+              <span>{{getProgressToNextLevel()}}%</span>
+              <span>Level {{levelDetails.currentLevel + 1}}</span>
+            </div>
+          </div>
+
+          <div class="points-info">
+            <div class="current-points">
+              <mat-icon>stars</mat-icon>
+              <span>{{levelDetails.currentPoints}} points earned</span>
+            </div>
+
+            <div class="next-level">
+              <mat-icon>arrow_upward</mat-icon>
+              <span>{{getPointsToNextLevel()}} points to next level</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="level-benefits">
+          <h3>Level Benefits</h3>
+          <ul>
+            <li *ngFor="let benefit of levelDetails.benefits">
+              <mat-icon>check_circle</mat-icon>
+              <span>{{benefit}}</span>
+            </li>
+          </ul>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Points Breakdown -->
+  <div *ngIf="!loading && levelDetails" class="points-breakdown">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Points Breakdown</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="breakdown-chart">
+          <!-- This would be a pie chart in a real application -->
+          <div class="chart-placeholder">
+            <div class="chart-segment" style="width: 40%">
+              <span>Courses (40%)</span>
+            </div>
+            <div class="chart-segment" style="width: 25%">
+              <span>Quizzes (25%)</span>
+            </div>
+            <div class="chart-segment" style="width: 20%">
+              <span>Exams (20%)</span>
+            </div>
+            <div class="chart-segment" style="width: 15%">
+              <span>Badges (15%)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="breakdown-list">
+          <div class="breakdown-item">
+            <div class="item-label">Courses Completed</div>
+            <div class="item-value">{{levelDetails.pointsBreakdown.courses}} points</div>
+          </div>
+
+          <div class="breakdown-item">
+            <div class="item-label">Quizzes Passed</div>
+            <div class="item-value">{{levelDetails.pointsBreakdown.quizzes}} points</div>
+          </div>
+
+          <div class="breakdown-item">
+            <div class="item-label">Exams Passed</div>
+            <div class="item-value">{{levelDetails.pointsBreakdown.exams}} points</div>
+          </div>
+
+          <div class="breakdown-item">
+            <div class="item-label">Badges Earned</div>
+            <div class="item-value">{{levelDetails.pointsBreakdown.badges}} points</div>
+          </div>
+
+          <div class="breakdown-item total">
+            <div class="item-label">Total Points</div>
+            <div class="item-value">{{levelDetails.currentPoints}} points</div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Leaderboard -->
+  <div *ngIf="!loading" class="leaderboard">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Leaderboard</mat-card-title>
+        <div class="leaderboard-filters">
+          <mat-button-toggle-group [value]="leaderboardType" (change)="changeLeaderboardType($event.value)">
+            <mat-button-toggle value="global">Global</mat-button-toggle>
+            <mat-button-toggle value="friends">Friends</mat-button-toggle>
+            <mat-button-toggle value="course">Course</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </mat-card-header>
+
+      <mat-card-content>
+        <table mat-table [dataSource]="leaderboard" class="leaderboard-table">
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef>Rank</th>
+            <td mat-cell *matCellDef="let user; let i = index" [class.current-user]="user.isCurrentUser">
+              <div class="rank-badge" [class.top-three]="i < 3">{{i + 1}}</div>
+            </td>
+          </ng-container>
+
+          <!-- User Column -->
+          <ng-container matColumnDef="user">
+            <th mat-header-cell *matHeaderCellDef>User</th>
+            <td mat-cell *matCellDef="let user" [class.current-user]="user.isCurrentUser">
+              <div class="user-info">
+                <div class="user-avatar">
+                  <img [src]="user.profilePicture || '/assets/images/default-avatar.jpg'" [alt]="user.username">
+                </div>
+                <div class="user-details">
+                  <div class="user-name">{{user.firstName}} {{user.lastName}}</div>
+                  <div class="user-username">{{user.username}}</div>
+                </div>
+              </div>
+            </td>
+          </ng-container>
+
+          <!-- Level Column -->
+          <ng-container matColumnDef="level">
+            <th mat-header-cell *matHeaderCellDef>Level</th>
+            <td mat-cell *matCellDef="let user" [class.current-user]="user.isCurrentUser">
+              <div class="level-badge-small">{{user.level}}</div>
+            </td>
+          </ng-container>
+
+          <!-- Points Column -->
+          <ng-container matColumnDef="points">
+            <th mat-header-cell *matHeaderCellDef>Points</th>
+            <td mat-cell *matCellDef="let user" [class.current-user]="user.isCurrentUser">
+              <div class="points">
+                <mat-icon>stars</mat-icon>
+                <span>{{user.points}}</span>
+              </div>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="['position', 'user', 'level', 'points']"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['position', 'user', 'level', 'points'];"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

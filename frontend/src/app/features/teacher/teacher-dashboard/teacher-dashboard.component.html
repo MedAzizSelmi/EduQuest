@@ -1,0 +1,190 @@
+<div class="dashboard-container">
+  <h1>Teacher Dashboard</h1>
+
+  <!-- Course Stats -->
+  <div class="stats-cards">
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.totalCourses}}</div>
+        <div class="stat-label">Total Courses</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.publishedCourses}}</div>
+        <div class="stat-label">Published</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.draftCourses}}</div>
+        <div class="stat-label">Drafts</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.archivedCourses}}</div>
+        <div class="stat-label">Archived</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Student Stats -->
+  <div class="stats-cards">
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.totalStudents}}</div>
+        <div class="stat-label">Total Students</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.totalEnrollments}}</div>
+        <div class="stat-label">Total Enrollments</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.completionRate | number:'1.0-0'}}%</div>
+        <div class="stat-label">Completion Rate</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Quiz and Exam Stats -->
+  <div class="stats-cards">
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.totalQuizzes}}</div>
+        <div class="stat-label">Total Quizzes</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.totalQuizAttempts}}</div>
+        <div class="stat-label">Quiz Attempts</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.quizPassRate | number:'1.0-0'}}%</div>
+        <div class="stat-label">Quiz Pass Rate</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="stats-cards">
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.totalExams}}</div>
+        <div class="stat-label">Total Exams</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.totalExamAttempts}}</div>
+        <div class="stat-label">Exam Attempts</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="stat-value">{{dashboard.examPassRate | number:'1.0-0'}}%</div>
+        <div class="stat-label">Exam Pass Rate</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Course Stats Table -->
+  <mat-card class="course-stats-card">
+    <mat-card-header>
+      <mat-card-title>Course Statistics</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="dashboard.courseStats" class="mat-elevation-z0">
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef>Title</th>
+          <td mat-cell *matCellDef="let course">{{course.title}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let course">
+            <mat-chip-listbox>
+              <mat-chip [color]="course.status === 'Published' ? 'primary' :
+                         course.status === 'Draft' ? 'accent' : 'warn'"
+                        selected>{{course.status}}</mat-chip>
+            </mat-chip-listbox>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="enrolledStudents">
+          <th mat-header-cell *matHeaderCellDef>Students</th>
+          <td mat-cell *matCellDef="let course">{{course.enrolledStudents}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="completionRate">
+          <th mat-header-cell *matHeaderCellDef>Completion</th>
+          <td mat-cell *matCellDef="let course">{{course.completionRate | number:'1.0-0'}}%</td>
+        </ng-container>
+
+        <ng-container matColumnDef="averageProgress">
+          <th mat-header-cell *matHeaderCellDef>Avg. Progress</th>
+          <td mat-cell *matCellDef="let course">
+            <mat-progress-bar mode="determinate" [value]="course.averageProgress"></mat-progress-bar>
+            <span>{{course.averageProgress | number:'1.0-0'}}%</span>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="quizCount">
+          <th mat-header-cell *matHeaderCellDef>Quizzes</th>
+          <td mat-cell *matCellDef="let course">{{course.quizCount}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="examCount">
+          <th mat-header-cell *matHeaderCellDef>Exams</th>
+          <td mat-cell *matCellDef="let course">{{course.examCount}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Recent Enrollments -->
+  <mat-card class="enrollments-card" *ngIf="dashboard.recentEnrollments && dashboard.recentEnrollments.length > 0">
+    <mat-card-header>
+      <mat-card-title>Recent Enrollments</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="dashboard.recentEnrollments" class="mat-elevation-z0">
+        <ng-container matColumnDef="courseTitle">
+          <th mat-header-cell *matHeaderCellDef>Course</th>
+          <td mat-cell *matCellDef="let enrollment">{{enrollment.courseTitle}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="userId">
+          <th mat-header-cell *matHeaderCellDef>Student ID</th>
+          <td mat-cell *matCellDef="let enrollment">{{enrollment.userId}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="enrollmentDate">
+          <th mat-header-cell *matHeaderCellDef>Enrollment Date</th>
+          <td mat-cell *matCellDef="let enrollment">{{enrollment.enrollmentDate | date:'medium'}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="enrollmentColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: enrollmentColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

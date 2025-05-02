@@ -1,0 +1,16 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.error-container {
+  text-align: center;
+  padding: 20px;
+  color: #f44336;
+}

@@ -1,0 +1,64 @@
+.course-list-container {
+  min-height: calc(100vh - 64px); /* Account for navbar */
+  padding-bottom: 40px;
+
+  .content-wrapper {
+    padding-top: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .page-title {
+    margin: 0 0 16px 0;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 8px; /* Extra space */
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from flex-end */
+    margin-bottom: 24px;
+  }
+
+  .filters-container {
+    margin-bottom: 32px;
+
+    .filter-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+      align-items: center;
+
+      mat-form-field {
+        flex: 1;
+      }
+    }
+  }
+
+  .no-courses {
+    text-align: center;
+    margin-top: 40px;
+
+    .no-courses-icon {
+      font-size: 60px;
+      width: 60px;
+      height: 60px;
+      color: #e0e0e0;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      margin: 8px 0;
+      font-weight: 500;
+    }
+
+    p {
+      color: #757575;
+      margin-bottom: 24px;
+    }
+  }
+}
