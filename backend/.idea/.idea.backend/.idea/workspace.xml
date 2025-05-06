@@ -9,248 +9,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6a3118c-f039-4b9e-9f7a-15d4685b117d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/AccountController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/CoursesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/DashboardController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/ExamsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/GamificationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/QuizzesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/CourseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/DashboardDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/ExamDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/GamificationDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/QuizDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/UserDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/ELearningPlatform.API.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/ELearningPlatform.API.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Extensions/IdentityServiceExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Migrations/20250421131800_FixedCascadeIssue.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Migrations/20250421131800_FixedCascadeIssue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Migrations/20250422165419_MakeBioNullable.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Migrations/20250422165419_MakeBioNullable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Answer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/AppUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Badge.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Certificate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/CodingGame.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Course.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Exam.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Lesson.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Module.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Question.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Quiz.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/UserBadge.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/UserCodingGame.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/UserCourse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/UserExam.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/UserQuiz.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/CourseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/DashboardService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/ExamService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/GamificationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/ICourseService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/IDashboardService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/IExamService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/IGamificationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/IQuizService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/ITokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/QuizService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/TokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Azure.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Azure.Identity.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.endpoints.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Humanizer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.Internal.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Build.Locator.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.SqlServer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Identity.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Identity.Stores.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Identity.Client.Extensions.Msal.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Identity.Client.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.OpenApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.SqlServer.Server.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Mono.TextTemplating.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.ClientModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.CodeDom.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Composition.AttributedModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Composition.Convention.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Composition.Hosting.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Composition.Runtime.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Composition.TypedParts.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Drawing.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Formats.Asn1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Memory.Data.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Runtime.Caching.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Security.Permissions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Text.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/System.Windows.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearnin.8ABF4D58.Up2Date" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ref/ELearningPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/refint/ELearningPlatform.API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.build.ELearningPlatform.API.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.ELearningPlatform.API.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.ELearningPlatform.API.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/ELearningPlatform.API.csproj.EntityFrameworkCore.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/ELearningPlatform.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/ELearningPlatform.API.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/ELearningPlatform.API.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/CoursesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/CoursesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Services/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/TokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ref/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ref/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/refint/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/refint/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,6 +127,7 @@
       <workItem from="1746099932894" duration="5277000" />
       <workItem from="1746121938516" duration="2306000" />
       <workItem from="1746173677651" duration="2169000" />
+      <workItem from="1746374401190" duration="3667000" />
     </task>
     <servers />
   </component>

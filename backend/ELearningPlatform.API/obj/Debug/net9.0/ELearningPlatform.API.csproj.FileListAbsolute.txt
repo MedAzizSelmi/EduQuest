@@ -173,3 +173,4 @@ C:\Users\azizs\EduQuest\backend\ELearningPlatform.API\bin\Debug\net9.0\tr\Micros
 C:\Users\azizs\EduQuest\backend\ELearningPlatform.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\azizs\EduQuest\backend\ELearningPlatform.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\azizs\EduQuest\backend\ELearningPlatform.API\bin\Debug\net9.0\ELearningPlatform.API.staticwebassets.runtime.json
+C:\Users\azizs\EduQuest\backend\ELearningPlatform.API\obj\Debug\net9.0\ELearningPlatform.API.sourcelink.json

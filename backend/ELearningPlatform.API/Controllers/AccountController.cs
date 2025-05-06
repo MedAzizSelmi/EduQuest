@@ -53,7 +53,12 @@ namespace ELearningPlatform.API.Controllers
 
             // Add user to role
             var normalizedRole = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(registerDto.Role.ToLower());
-            await _userManager.AddToRoleAsync(user, normalizedRole);
+            var roleResult = await _userManager.AddToRoleAsync(user, normalizedRole);
+    
+            if (!roleResult.Succeeded)
+            {
+                return BadRequest(roleResult.Errors);
+            }
 
             return new UserDto
             {

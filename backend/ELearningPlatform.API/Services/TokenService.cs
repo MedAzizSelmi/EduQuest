@@ -41,7 +41,7 @@ namespace ELearningPlatform.API.Services
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim("fullName", $"{user.FirstName} {user.LastName}"),
-                new Claim("role", user.Role.ToString())
+                new Claim(ClaimTypes.Role, user.Role.ToString())
             };
 
             try
@@ -61,10 +61,7 @@ namespace ELearningPlatform.API.Services
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.AddDays(7),
-                SigningCredentials = creds,
-                // Add issuer and audience validation
-                Issuer = "your-domain.com",
-                Audience = "your-audience"
+                SigningCredentials = creds
             };
 
             try

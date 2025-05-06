@@ -1,12 +1,16 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg",
-      "PackagePath": "staticwebassets\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg"
+      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg",
+      "PackagePath": "staticwebassets\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg"
     },
     {
-      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg",
-      "PackagePath": "staticwebassets\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg"
+      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg",
+      "PackagePath": "staticwebassets\\profile-pictures\\dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg"
+    },
+    {
+      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg",
+      "PackagePath": "staticwebassets\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

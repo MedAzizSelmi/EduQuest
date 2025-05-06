@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9PLe/ducIfWjf+BzKQYO+Ig7TnIh1GP6xTRZL3kJGPE=",
+  "Hash": "QhhzDcbRidyYFy/rqbutVbmuO56gYgVVzIoeNTU+oRI=",
   "Source": "ELearningPlatform.API",
   "BasePath": "_content/ELearningPlatform.API",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg",
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg",
       "SourceId": "ELearningPlatform.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
       "BasePath": "_content/ELearningPlatform.API",
-      "RelativePath": "profile-pictures/470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP#[.{fingerprint}]?.jpg",
+      "RelativePath": "profile-pictures/d72e7925-44fe-416f-9371-857c4a7c3266_OIP#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35,15 +35,36 @@
       "Integrity": "cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg"
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg"
     },
     {
-      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg",
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg",
       "SourceId": "ELearningPlatform.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
       "BasePath": "_content/ELearningPlatform.API",
-      "RelativePath": "profile-pictures/883cbe79-edcf-4ad1-8924-07eecf1c0646_R#[.{fingerprint}]?.jpg",
+      "RelativePath": "profile-pictures/dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hdk5w9nx55",
+      "Integrity": "m3XOCz3KDnK4B4K+AjZHqpSRpdplK6I7bQd7jOefxVM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "profile-pictures/f74f632a-d715-40a5-b9f1-8d82014dcb7b_R#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -56,13 +77,13 @@
       "Integrity": "YHfLuUbNtYqPD0a2j28V+xTFGP4bI9eFvn4RUsSG/PM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg"
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg"
     }
   ],
   "Endpoints": [
     {
-      "Route": "profile-pictures/470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg",
-      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg",
+      "Route": "profile-pictures/d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -83,7 +104,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 19:13:46 GMT"
+          "Value": "Sun, 04 May 2025 15:59:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -98,8 +119,8 @@
       ]
     },
     {
-      "Route": "profile-pictures/470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.wg30n62jug.jpg",
-      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg",
+      "Route": "profile-pictures/d72e7925-44fe-416f-9371-857c4a7c3266_OIP.wg30n62jug.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -120,7 +141,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 19:13:46 GMT"
+          "Value": "Sun, 04 May 2025 15:59:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -134,7 +155,7 @@
         },
         {
           "Name": "label",
-          "Value": "profile-pictures/470bcfd6-d77b-4603-83a4-bab7d43500dd_OIP.jpg"
+          "Value": "profile-pictures/d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg"
         },
         {
           "Name": "integrity",
@@ -143,8 +164,90 @@
       ]
     },
     {
-      "Route": "profile-pictures/883cbe79-edcf-4ad1-8924-07eecf1c0646_R.8itdayer99.jpg",
-      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg",
+      "Route": "profile-pictures/dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.hdk5w9nx55.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "437281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3XOCz3KDnK4B4K+AjZHqpSRpdplK6I7bQd7jOefxVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 04 May 2025 16:19:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hdk5w9nx55"
+        },
+        {
+          "Name": "label",
+          "Value": "profile-pictures/dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3XOCz3KDnK4B4K+AjZHqpSRpdplK6I7bQd7jOefxVM="
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\dbb422b3-4eaf-4db4-8150-494131580a83_IMGL0801.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "437281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m3XOCz3KDnK4B4K+AjZHqpSRpdplK6I7bQd7jOefxVM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 04 May 2025 16:19:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m3XOCz3KDnK4B4K+AjZHqpSRpdplK6I7bQd7jOefxVM="
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.8itdayer99.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -165,7 +268,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:17:03 GMT"
+          "Value": "Sun, 04 May 2025 15:59:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -179,7 +282,7 @@
         },
         {
           "Name": "label",
-          "Value": "profile-pictures/883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg"
+          "Value": "profile-pictures/f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg"
         },
         {
           "Name": "integrity",
@@ -188,8 +291,8 @@
       ]
     },
     {
-      "Route": "profile-pictures/883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg",
-      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\883cbe79-edcf-4ad1-8924-07eecf1c0646_R.jpg",
+      "Route": "profile-pictures/f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -210,7 +313,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:17:03 GMT"
+          "Value": "Sun, 04 May 2025 15:59:03 GMT"
         },
         {
           "Name": "Cache-Control",

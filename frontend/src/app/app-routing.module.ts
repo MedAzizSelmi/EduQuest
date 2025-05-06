@@ -62,13 +62,13 @@ const routes: Routes = [
     children: [{ path: "", component: StudentDashboardComponent }],
   },
   { path: "courses", component: CourseListComponent },
-  { path: "courses/:id", component: CourseDetailComponent },
   {
     path: "courses/create",
     component: CourseCreateComponent,
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ["Teacher", "Admin"] },
   },
+  { path: "courses/:id", component: CourseDetailComponent },
   {
     path: "courses/:id/edit",
     component: CourseEditComponent,

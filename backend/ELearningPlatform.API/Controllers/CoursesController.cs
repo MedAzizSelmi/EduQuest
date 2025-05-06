@@ -34,23 +34,24 @@ namespace ELearningPlatform.API.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var role = User.FindFirstValue("role");
 
-            if (role == UserRole.Teacher.ToString())
+            if (User.IsInRole(UserRole.Teacher.ToString()))
             {
                 var courses = await _courseService.GetTeacherCoursesAsync(userId);
                 return Ok(courses);
             }
-            else if (role == UserRole.Student.ToString())
+            else if (User.IsInRole(UserRole.Student.ToString()))
             {
                 var courses = await _courseService.GetStudentCoursesAsync(userId);
                 return Ok(courses);
             }
-            else if (role == UserRole.Admin.ToString())
+            else if (User.IsInRole(UserRole.Admin.ToString()))
             {
                 var courses = await _courseService.GetCoursesAsync();
                 return Ok(courses);
             }
 
             return Forbid();
+
         }
 
         [HttpGet("{id}")]
