@@ -10,7 +10,7 @@ import {
   UpdateModuleRequest,
   Lesson,
   CreateLessonRequest,
-  UpdateLessonRequest,
+  UpdateLessonRequest, Attachment,
 } from "../models/course.model"
 import { environment } from "../../../environments/environment"
 
@@ -34,11 +34,26 @@ export class CourseService {
     if (isNaN(id)) {
       return throwError(() => new Error('Invalid course ID'));
     }
-    return this.http.get<Course>(`${this.apiUrl}/courses/${id}`);
+    return this.http.get<Course>(`${this.apiUrl}/${id}`);
   }
 
   createCourse(createCourseRequest: CreateCourseRequest): Observable<Course> {
-    return this.http.post<Course>(this.apiUrl, createCourseRequest)
+    const formData = new FormData();
+
+    // Append all fields
+    formData.append('title', createCourseRequest.title);
+    formData.append('description', createCourseRequest.description);
+    formData.append('durationInMinutes', createCourseRequest.durationInMinutes.toString());
+    formData.append('pointsToEarn', createCourseRequest.pointsToEarn.toString());
+    formData.append('category', createCourseRequest.category);
+    formData.append('level', createCourseRequest.level);
+
+    // Optional thumbnail
+    if (createCourseRequest.thumbnailUrl) {
+      formData.append('thumbnailUrl', createCourseRequest.thumbnailUrl);
+    }
+
+    return this.http.post<Course>(this.apiUrl, formData);
   }
 
   updateCourse(id: number, updateCourseRequest: UpdateCourseRequest): Observable<Course> {
@@ -51,6 +66,20 @@ export class CourseService {
 
   enrollInCourse(id: number): Observable<void> {
     return this.http.post<void>(`${this.apiUrl}/${id}/enroll`, {})
+  }
+
+  uploadAttachment(courseId: number, file: File): Observable<Attachment> {
+    const formData = new FormData();
+    formData.append('file', file);
+    return this.http.post<Attachment>(`${this.apiUrl}/${courseId}/attachments`, formData);
+  }
+
+  getAttachments(courseId: number): Observable<Attachment[]> {
+    return this.http.get<Attachment[]>(`${this.apiUrl}/${courseId}/attachments`);
+  }
+
+  deleteAttachment(attachmentId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/attachments/${attachmentId}`);
   }
 
   // Module endpoints

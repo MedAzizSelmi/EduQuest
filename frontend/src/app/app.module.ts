@@ -73,6 +73,9 @@ import { LevelsComponent } from "./features/gamification/levels/levels.component
 import { CodingGamesComponent } from "./features/gamification/coding-games/coding-games.component"
 import { CodingGameDetailComponent } from "./features/gamification/coding-games/coding-game-detail/coding-game-detail.component"
 import {MatRadioButton, MatRadioGroup} from '@angular/material/radio';
+import {FileSizePipe} from './core/pipes/size.pipe';
+import {FileUploadComponent} from './features/Attachments/file-upload.component';
+import {TruncatePipe} from './core/pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -112,6 +115,9 @@ import {MatRadioButton, MatRadioGroup} from '@angular/material/radio';
     LevelsComponent,
     CodingGamesComponent,
     CodingGameDetailComponent,
+    FileSizePipe,
+    FileUploadComponent,
+    TruncatePipe,
   ],
   imports: [
     BrowserModule,

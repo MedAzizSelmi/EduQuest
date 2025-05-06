@@ -1,5 +1,23 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\5c5fb5b9-66df-4802-b349-b2837911ab33_IMGL0801 (1).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>profile-pictures/5c5fb5b9-66df-4802-b349-b2837911ab33_IMGL0801 (1).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hdk5w9nx55</Fingerprint>
+      <Integrity>m3XOCz3KDnK4B4K+AjZHqpSRpdplK6I7bQd7jOefxVM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\5c5fb5b9-66df-4802-b349-b2837911ab33_IMGL0801 (1).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>ELearningPlatform.API</SourceId>

@@ -64,7 +64,7 @@ namespace ELearningPlatform.API.Controllers
 
         [Authorize(Roles = "Teacher,Admin")]
         [HttpPost]
-        public async Task<ActionResult<Course>> CreateCourse(CreateCourseDto courseDto)
+        public async Task<ActionResult<Course>> CreateCourse([FromForm] CreateCourseDto courseDto)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var course = await _courseService.CreateCourseAsync(courseDto, userId);
@@ -97,6 +97,32 @@ namespace ELearningPlatform.API.Controllers
             var result = await _courseService.EnrollUserInCourseAsync(userId, id);
             if (!result) return BadRequest("Already enrolled or course not found");
             return Ok();
+        }
+        
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpPost("{courseId}/attachments")]
+        public async Task<ActionResult<AttachmentDto>> UploadAttachment(int courseId, IFormFile file)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var attachment = await _courseService.UploadAttachmentAsync(courseId, userId, file);
+            return Ok(attachment);
+        }
+
+        [HttpGet("{courseId}/attachments")]
+        public async Task<ActionResult<IEnumerable<AttachmentDto>>> GetAttachments(int courseId)
+        {
+            var attachments = await _courseService.GetAttachmentsAsync(courseId);
+            return Ok(attachments);
+        }
+
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpDelete("attachments/{attachmentId}")]
+        public async Task<ActionResult> DeleteAttachment(int attachmentId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _courseService.DeleteAttachmentAsync(attachmentId, userId);
+            if (!result) return NotFound();
+            return NoContent();
         }
     }
 }

@@ -110,4 +110,14 @@ namespace ELearningPlatform.API.DTOs
         public int? DurationInMinutes { get; set; }
         public LessonType? Type { get; set; }
     }
+    
+    public class AttachmentDto
+    {
+        public int Id { get; set; }
+        public string FileName { get; set; }
+        public string FileUrl { get; set; }
+        public string FileType { get; set; }
+        public long FileSize { get; set; }
+        public DateTime UploadDate { get; set; }
+    }
 }

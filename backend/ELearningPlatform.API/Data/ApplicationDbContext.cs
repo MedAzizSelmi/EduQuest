@@ -19,6 +19,7 @@ namespace ELearningPlatform.API.Data
         public DbSet<UserCourse> UserCourses { get; set; }
         public DbSet<UserQuiz> UserQuizzes { get; set; }
         public DbSet<UserExam> UserExams { get; set; }
+        public DbSet<CourseAttachment> CourseAttachments { get; set; }
 
         // Gamification
         public DbSet<Badge> Badges { get; set; }

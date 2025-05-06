@@ -90,8 +90,8 @@ if (app.Environment.IsDevelopment())
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
-    RequestPath = ""
+        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "profile-pictures")),
+    RequestPath = "/profile-pictures"
 });
 
 app.UseHttpsRedirection();

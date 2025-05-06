@@ -22,6 +22,20 @@ namespace ELearningPlatform.API.Models
         public ICollection<Quiz> Quizzes { get; set; }
         public ICollection<Exam> Exams { get; set; }
         public ICollection<UserCourse> UserCourses { get; set; }
+        
+        public ICollection<CourseAttachment> Attachments { get; set; }
+    }
+    
+    public class CourseAttachment
+    {
+        public int Id { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string FileType { get; set; }
+        public long FileSize { get; set; }
+        public int CourseId { get; set; }
+        public Course Course { get; set; }
+        public DateTime UploadDate { get; set; } = DateTime.UtcNow;
     }
 
     public enum CourseStatus

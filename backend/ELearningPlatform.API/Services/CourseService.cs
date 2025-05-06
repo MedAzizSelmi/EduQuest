@@ -257,5 +257,81 @@ namespace ELearningPlatform.API.Services
                 CompletionDate = uc.CompletionDate
             });
         }
+        
+        public async Task<AttachmentDto> UploadAttachmentAsync(int courseId, string userId, IFormFile file)
+        {
+            var course = await _context.Courses.FirstOrDefaultAsync(c => c.Id == courseId && c.TeacherId == userId);
+            if (course == null) return null;
+
+            var uploadsFolder = Path.Combine("wwwroot", "uploads", "courses", courseId.ToString());
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            var uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            var attachment = new CourseAttachment
+            {
+                FileName = file.FileName,
+                FilePath = Path.Combine("uploads", "courses", courseId.ToString(), uniqueFileName),
+                FileType = file.ContentType,
+                FileSize = file.Length,
+                CourseId = courseId
+            };
+
+            _context.CourseAttachments.Add(attachment);
+            await _context.SaveChangesAsync();
+
+            return new AttachmentDto
+            {
+                Id = attachment.Id,
+                FileName = attachment.FileName,
+                FileUrl = "/" + attachment.FilePath.Replace("\\", "/"),
+                FileType = attachment.FileType,
+                FileSize = attachment.FileSize,
+                UploadDate = attachment.UploadDate
+            };
+        }
+
+        public async Task<IEnumerable<AttachmentDto>> GetAttachmentsAsync(int courseId)
+        {   
+            return await _context.CourseAttachments
+                .Where(a => a.CourseId == courseId)
+                .Select(a => new AttachmentDto
+                {
+                    Id = a.Id,
+                    FileName = a.FileName,
+                    FileUrl = "/" + a.FilePath.Replace("\\", "/"),
+                    FileType = a.FileType,
+                    FileSize = a.FileSize,
+                    UploadDate = a.UploadDate
+                })
+                .ToListAsync();
+        }   
+
+        public async Task<bool> DeleteAttachmentAsync(int attachmentId, string userId)
+        {
+            var attachment = await _context.CourseAttachments
+                .Include(a => a.Course)
+                .FirstOrDefaultAsync(a => a.Id == attachmentId && a.Course.TeacherId == userId);
+
+            if (attachment == null) return false;
+
+            var filePath = Path.Combine("wwwroot", attachment.FilePath);
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+            }
+
+            _context.CourseAttachments.Remove(attachment);
+            return await _context.SaveChangesAsync() > 0;
+        }
     }
 }

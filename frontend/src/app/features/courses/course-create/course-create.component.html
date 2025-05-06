@@ -3,7 +3,7 @@
     <mat-card-header>
       <mat-card-title>Create New Course</mat-card-title>
     </mat-card-header>
-    
+
     <mat-card-content>
       <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="outline" class="full-width">
@@ -63,6 +63,28 @@
             </mat-select>
             <mat-error *ngIf="f['level'].errors?.['required']">Level is required</mat-error>
           </mat-form-field>
+
+          <div class="form-section">
+            <label class="mat-label">Attachments</label>
+            <app-file-upload
+              (fileChange)="onFileChange($event)"
+              [accept]="'.pdf,.doc,.docx,.ppt,.pptx,.zip,.xls,.xlsx,.txt,.md,.jpg,.jpeg,.png'"
+              [multiple]="true">
+            </app-file-upload>
+            <mat-hint class="file-upload-hint">PDFs, Documents, Presentations, Images, etc.</mat-hint>
+          </div>
+        </div>
+
+        <div *ngIf="selectedFiles.length > 0" class="selected-files">
+          <h4>Selected Files:</h4>
+          <ul>
+            <li *ngFor="let file of selectedFiles">
+              {{file.name}} ({{file.size | fileSize}})
+              <button mat-icon-button (click)="removeFile(file)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </li>
+          </ul>
         </div>
 
         <div class="form-actions">

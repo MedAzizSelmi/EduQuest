@@ -41,31 +41,30 @@ export class CourseListComponent implements OnInit {
   loadCourses(): void {
     this.loading = true;
 
-    // If user is a teacher or admin, load their courses
-    if (this.isTeacherOrAdmin) {
-      this.courseService.getMyCourses().subscribe({
-        next: (courses) => {
-          this.courses = courses;
-          this.applyFilters();
-          this.loading = false;
-        },
-        error: () => {
-          this.loading = false;
-        },
-      });
-    } else {
-      // Otherwise load all published courses
-      this.courseService.getCourses().subscribe({
-        next: (courses) => {
-          this.courses = courses;
-          this.applyFilters();
-          this.loading = false;
-        },
-        error: () => {
-          this.loading = false;
-        },
-      });
-    }
+    const loadObservable = this.isTeacherOrAdmin
+      ? this.courseService.getMyCourses()
+      : this.courseService.getCourses();
+
+    loadObservable.subscribe({
+      next: (courses) => {
+        console.log('Courses loaded:', courses); // Debug log
+        if (!courses || courses.length === 0) {
+          console.warn('No courses received from API');
+        }
+        this.courses = courses || []; // Ensure we always have an array
+        this.applyFilters();
+        this.loading = false;
+      },
+      error: (error) => {
+        console.error('Error loading courses:', error); // Detailed error log
+        this.loading = false;
+        this.snackBar.open(
+          'Failed to load courses. Please try again later.',
+          'Close',
+          { duration: 5000 }
+        );
+      }
+    });
   }
 
   // Add resetFilters method
@@ -74,6 +73,14 @@ export class CourseListComponent implements OnInit {
     this.categoryFilter = "All";
     this.levelFilter = "All";
     this.applyFilters();
+  }
+
+  get hasFilters(): boolean {
+    return (
+      this.searchTerm !== '' ||
+      this.categoryFilter !== 'All' ||
+      this.levelFilter !== 'All'
+    );
   }
 
   applyFilters(): void {

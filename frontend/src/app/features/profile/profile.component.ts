@@ -71,6 +71,12 @@ export class ProfileComponent implements OnInit {
     return this.profileForm.controls
   }
 
+  getProfilePictureUrl(profilePicture: string): string {
+    return profilePicture
+      ? `http://localhost:5000/profile-pictures/${profilePicture}`
+      : 'assets/default-avatar.png';
+  }
+
   onSubmit(): void {
     this.submitted = true;
 

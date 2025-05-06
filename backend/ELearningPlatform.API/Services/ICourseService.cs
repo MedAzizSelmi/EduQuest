@@ -15,5 +15,8 @@ namespace ELearningPlatform.API.Services
         Task<bool> EnrollUserInCourseAsync(string userId, int courseId);
         Task<IEnumerable<CourseDto>> GetTeacherCoursesAsync(string teacherId);
         Task<IEnumerable<CourseDto>> GetStudentCoursesAsync(string studentId);
+        Task<AttachmentDto> UploadAttachmentAsync(int courseId, string userId, IFormFile file);
+        Task<IEnumerable<AttachmentDto>> GetAttachmentsAsync(int courseId);
+        Task<bool> DeleteAttachmentAsync(int attachmentId, string userId);
     }
 }

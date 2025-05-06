@@ -14,6 +14,7 @@ export interface Course {
   level: string
   modulesCount: number
   enrolledStudentsCount: number
+  attachments?: Attachment[];
   modules?: Module[]
   quizzes?: Quiz[]
   exams?: Exam[]
@@ -22,6 +23,15 @@ export interface Course {
   pointsEarned?: number
   enrollmentDate?: Date
   completionDate?: Date
+}
+
+export interface Attachment {
+  id: number
+  fileName: string
+  fileUrl: string
+  fileType: string
+  fileSize: number
+  uploadDate: Date
 }
 
 export interface Module {
@@ -51,6 +61,7 @@ export interface CreateCourseRequest {
   pointsToEarn: number
   category: string
   level: string
+  attachments?: File[]
 }
 
 export interface UpdateCourseRequest {

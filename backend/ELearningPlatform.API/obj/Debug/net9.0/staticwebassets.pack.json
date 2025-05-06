@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\5c5fb5b9-66df-4802-b349-b2837911ab33_IMGL0801 (1).jpg",
+      "PackagePath": "staticwebassets\\profile-pictures\\5c5fb5b9-66df-4802-b349-b2837911ab33_IMGL0801 (1).jpg"
+    },
+    {
       "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg",
       "PackagePath": "staticwebassets\\profile-pictures\\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg"
     },

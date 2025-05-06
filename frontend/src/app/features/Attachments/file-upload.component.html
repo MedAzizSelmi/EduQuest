@@ -1,0 +1,18 @@
+<div class="file-upload-container">
+  <input
+    type="file"
+    [id]="id"
+    [accept]="accept"
+    [multiple]="multiple"
+    (change)="onFileSelected($event)"
+    #fileInput
+    style="display: none"
+  />
+  <button mat-button color="primary" type="button" (click)="fileInput.click()">
+    <mat-icon>attach_file</mat-icon>
+    {{ buttonLabel }}
+  </button>
+  <span class="file-names" *ngIf="selectedFiles.length > 0">
+    {{ selectedFiles.length }} file(s) selected
+  </span>
+</div>
