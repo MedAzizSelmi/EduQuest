@@ -30,4 +30,20 @@ namespace ELearningPlatform.API.Models
         Teacher,
         Admin
     }
+    public static class RoleSeeder
+    {
+        public static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
+        {
+            string[] roleNames = { "ADMIN", "TEACHER", "STUDENT" };
+
+            foreach (var role in roleNames)
+            {
+                if (!await roleManager.RoleExistsAsync(role))
+                {
+                    await roleManager.CreateAsync(new IdentityRole(role));
+                }
+            }
+        }
+    }
+
 }
