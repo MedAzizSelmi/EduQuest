@@ -53,63 +53,6 @@ namespace ELearningPlatform.API.DTOs
         public string Category { get; set; }
         public string Level { get; set; }
     }
-
-    public class ModuleDto
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public int Order { get; set; }
-        public int LessonsCount { get; set; }
-        public List<LessonDto> Lessons { get; set; }
-    }
-
-    public class CreateModuleDto
-    {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public int Order { get; set; }
-        public int CourseId { get; set; }
-    }
-
-    public class UpdateModuleDto
-    {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public int? Order { get; set; }
-    }
-
-    public class LessonDto
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string VideoUrl { get; set; }
-        public int Order { get; set; }
-        public int DurationInMinutes { get; set; }
-        public string Type { get; set; }
-    }
-
-    public class CreateLessonDto
-    {
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string VideoUrl { get; set; }
-        public int Order { get; set; }
-        public int DurationInMinutes { get; set; }
-        public int ModuleId { get; set; }
-        public LessonType Type { get; set; }
-    }
-
-    public class UpdateLessonDto
-    {
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string VideoUrl { get; set; }
-        public int? Order { get; set; }
-        public int? DurationInMinutes { get; set; }
-        public LessonType? Type { get; set; }
-    }
     
     public class AttachmentDto
     {

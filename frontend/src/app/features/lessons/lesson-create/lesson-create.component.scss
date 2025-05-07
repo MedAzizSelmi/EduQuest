@@ -1,0 +1,31 @@
+.lesson-create-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 16px;
+
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .half-width {
+    width: calc(50% - 8px);
+  }
+
+  .form-row {
+    display: flex;
+    gap: 16px;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  mat-spinner {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}

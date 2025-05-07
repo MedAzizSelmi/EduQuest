@@ -109,6 +109,11 @@ export class CourseDetailComponent implements OnInit {
     this.router.navigate(["/courses", this.course.id, "edit"])
   }
 
+  viewModules(courseId: number): void {
+    if(!this.course) return
+    this.router.navigate(['/courses', this.course.id, 'modules']);
+  }
+
   viewQuizzes(): void {
     if (!this.course) return
     this.router.navigate(["/courses", this.course.id, "quizzes"])

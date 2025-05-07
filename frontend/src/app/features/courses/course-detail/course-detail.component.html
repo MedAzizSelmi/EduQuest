@@ -1,65 +1,72 @@
 <div class="course-detail-container">
   <!-- Loading Spinner -->
   <div *ngIf="loading" class="loading-spinner">
-    <mat-spinner></mat-spinner>
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Loading course details...</p>
   </div>
 
   <div *ngIf="!loading && course" class="course-content">
     <!-- Course Header -->
-    <div class="course-header" [style.backgroundImage]="'url(' + (course.thumbnailUrl || 'placeholder.jpg') + ')'">
-      <div class="header-overlay">
-        <div class="header-content">
-          <h1>{{course.title}}</h1>
-          <p class="teacher">Instructor: {{course.teacherName}}</p>
+    <div class="course-header" [style.backgroundImage]="'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(' + (course.thumbnailUrl || 'default-course.png') + ')'">
+      <div class="header-content">
+        <h1 class="course-title">{{course.title}}</h1>
+        <p class="teacher">
+          <mat-icon>person</mat-icon>
+          Instructor: {{course.teacherName}}
+        </p>
 
-          <div class="course-meta">
-            <div class="meta-item">
-              <mat-icon>category</mat-icon>
-              <span>{{course.category}}</span>
-            </div>
-            <div class="meta-item">
-              <mat-icon>signal_cellular_alt</mat-icon>
-              <span>{{course.level}}</span>
-            </div>
-            <div class="meta-item">
-              <mat-icon>timer</mat-icon>
-              <span>{{course.durationInMinutes}} min</span>
-            </div>
-            <div class="meta-item">
-              <mat-icon>people</mat-icon>
-              <span>{{course.enrolledStudentsCount}} students</span>
-            </div>
+        <div class="course-meta">
+          <div class="meta-item">
+            <mat-icon>category</mat-icon>
+            <span>{{course.category}}</span>
           </div>
+          <div class="meta-item">
+            <mat-icon>signal_cellular_alt</mat-icon>
+            <span>{{course.level}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>timer</mat-icon>
+            <span>{{course.durationInMinutes}} min</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>people</mat-icon>
+            <span>{{course.enrolledStudentsCount}} students</span>
+          </div>
+        </div>
 
-          <div class="course-actions">
-            <button *ngIf="isOwner || isTeacherOrAdmin" mat-raised-button color="accent" (click)="editCourse()">
-              <mat-icon>edit</mat-icon>
-              Edit Course
-            </button>
-            <button *ngIf="!isEnrolled && !isTeacherOrAdmin" mat-raised-button color="primary" (click)="enrollInCourse()">
-              <mat-icon>school</mat-icon>
-              Enroll Now
-            </button>
-            <button *ngIf="isEnrolled" mat-raised-button color="primary" (click)="viewQuizzes()">
-              <mat-icon>quiz</mat-icon>
-              Quizzes
-            </button>
-            <button *ngIf="isEnrolled" mat-raised-button color="warn" (click)="viewExams()">
-              <mat-icon>assignment</mat-icon>
-              Exams
-            </button>
-          </div>
+        <div class="course-actions">
+          <button *ngIf="isOwner || isTeacherOrAdmin" mat-raised-button color="accent" (click)="editCourse()">
+            <mat-icon>edit</mat-icon>
+            Edit Course
+          </button>
+          <button *ngIf="!isEnrolled && !isTeacherOrAdmin" mat-raised-button color="primary" (click)="enrollInCourse()">
+            <mat-icon>school</mat-icon>
+            Enroll Now
+          </button>
+          <button *ngIf="isEnrolled" mat-raised-button color="primary" (click)="viewQuizzes()">
+            <mat-icon>quiz</mat-icon>
+            Quizzes
+          </button>
+          <button *ngIf="isEnrolled" mat-raised-button color="warn" (click)="viewExams()">
+            <mat-icon>assignment</mat-icon>
+            Exams
+          </button>
+          <button *ngIf="isEnrolled" mat-raised-button color="accent" (click)="viewModules(course.id)">
+            <mat-icon>view_module</mat-icon>
+            Modules
+          </button>
         </div>
       </div>
     </div>
 
     <!-- Course Progress (for enrolled students) -->
     <div *ngIf="isEnrolled" class="course-progress-container">
-      <h3>Your Progress</h3>
-      <div class="progress-bar-container">
-        <mat-progress-bar mode="determinate" [value]="course.progress || 0"></mat-progress-bar>
-        <span>{{course.progress || 0}}% Complete</span>
+      <div class="progress-header">
+        <h3>Your Progress</h3>
+        <span class="progress-percentage">{{course.progress || 0}}% Complete</span>
       </div>
+      <mat-progress-bar mode="determinate" [value]="course.progress || 0" color="accent"></mat-progress-bar>
+
       <div *ngIf="course.isCompleted" class="completion-badge">
         <mat-icon>verified</mat-icon>
         <span>Course Completed</span>
@@ -81,12 +88,18 @@
       <div class="course-content-container">
         <div class="modules-sidebar">
           <h3>Course Content</h3>
+          <div class="modules-count" *ngIf="course.modules?.length">
+            {{course.modules?.length}} modules
+          </div>
+
           <mat-nav-list>
-            <mat-list-item *ngFor="let module of course.modules"
-                          [class.active]="activeModule?.id === module.id"
-                          (click)="setActiveModule(module)">
-              <mat-icon matListItemIcon>folder</mat-icon>
-              <div matListItemTitle>{{module.title}}</div>
+            <mat-list-item *ngFor="let module of course.modules; let i = index"
+                           [class.active]="activeModule?.id === module.id"
+                           (click)="setActiveModule(module)">
+              <div matListItemIcon>
+                <mat-icon>folder</mat-icon>
+              </div>
+              <div matListItemTitle>{{i + 1}}. {{module.title}}</div>
               <div matListItemLine>{{module.lessonsCount}} lessons</div>
             </mat-list-item>
           </mat-nav-list>
@@ -100,13 +113,14 @@
           </div>
 
           <!-- Lesson List -->
-          <mat-accordion *ngIf="activeModule?.lessons?.length">
-            <mat-expansion-panel *ngFor="let lesson of activeModule?.lessons"
-                               [expanded]="activeLesson?.id === lesson.id"
-                               (opened)="setActiveLesson(lesson)">
+          <mat-accordion *ngIf="activeModule?.lessons?.length" multi="false" displayMode="flat">
+            <mat-expansion-panel *ngFor="let lesson of activeModule?.lessons; let i = index"
+                                 [expanded]="activeLesson?.id === lesson.id"
+                                 (opened)="setActiveLesson(lesson)">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  <mat-icon [ngSwitch]="lesson.type">
+                  <span class="lesson-number">{{i + 1}}.</span>
+                  <mat-icon [ngSwitch]="lesson.type" class="lesson-type-icon">
                     <ng-container *ngSwitchCase="'Video'">videocam</ng-container>
                     <ng-container *ngSwitchCase="'Text'">article</ng-container>
                     <ng-container *ngSwitchCase="'Interactive'">touch_app</ng-container>
@@ -116,7 +130,7 @@
                   {{lesson.title}}
                 </mat-panel-title>
                 <mat-panel-description>
-                  {{lesson.durationInMinutes}} min
+                  <span class="lesson-duration">{{lesson.durationInMinutes}} min</span>
                 </mat-panel-description>
               </mat-expansion-panel-header>
 
@@ -130,8 +144,9 @@
                 <!-- Text Content -->
                 <div *ngIf="lesson.content" class="lesson-text" [innerHTML]="lesson.content | safe: 'html'"></div>
 
-                <!-- Interactive Content or Coding Exercise would be implemented here -->
+                <!-- Interactive Content or Coding Exercise -->
                 <div *ngIf="lesson.type === 'Interactive' || lesson.type === 'CodingExercise'" class="interactive-placeholder">
+                  <mat-icon>code</mat-icon>
                   <p>Interactive content is available when enrolled in the course.</p>
                 </div>
               </div>
@@ -150,7 +165,7 @@
 
   <!-- Error Message -->
   <div *ngIf="!loading && !course" class="error-message">
-    <mat-icon>error</mat-icon>
+    <mat-icon>error_outline</mat-icon>
     <h2>Course Not Found</h2>
     <p>The course you're looking for doesn't exist or you don't have permission to view it.</p>
     <button mat-raised-button color="primary" routerLink="/courses">Back to Courses</button>

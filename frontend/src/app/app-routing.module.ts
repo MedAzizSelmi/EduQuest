@@ -33,6 +33,8 @@ import { CertificatesComponent } from "./features/gamification/certificates/cert
 import { LevelsComponent } from "./features/gamification/levels/levels.component"
 import { CodingGamesComponent } from "./features/gamification/coding-games/coding-games.component"
 import { CodingGameDetailComponent } from "./features/gamification/coding-games/coding-game-detail/coding-game-detail.component"
+import {LessonCreateComponent} from './features/lessons/lesson-create/lesson-create.component';
+import {ModuleListComponent} from './features/modules/module-list/module-list.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -114,6 +116,16 @@ const routes: Routes = [
     component: ExamTakeComponent,
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ["Student"] },
+  },
+  {
+    path: "courses/:courseId/modules",
+    component: ModuleListComponent
+  },
+  {
+    path: 'courses/:courseId/lessons/new',
+    component: LessonCreateComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['Teacher', 'Admin'] }
   },
   // Gamification Routes
   {

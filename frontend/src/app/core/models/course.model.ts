@@ -95,7 +95,7 @@ export interface CreateLessonRequest {
   order: number
   durationInMinutes: number
   moduleId: number
-  type: string
+  type: LessonType
 }
 
 export interface UpdateLessonRequest {
@@ -104,7 +104,14 @@ export interface UpdateLessonRequest {
   videoUrl?: string
   order?: number
   durationInMinutes?: number
-  type?: string
+  type?: LessonType
+}
+
+export enum LessonType {
+  Video = 'Video',
+  Text = 'Text',
+  Interactive = 'Interactive',
+  CodingExercise = 'CodingExercise'
 }
 
 export type Quiz = {}

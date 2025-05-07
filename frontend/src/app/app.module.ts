@@ -76,6 +76,8 @@ import {MatRadioButton, MatRadioGroup} from '@angular/material/radio';
 import {FileSizePipe} from './core/pipes/size.pipe';
 import {FileUploadComponent} from './features/Attachments/file-upload.component';
 import {TruncatePipe} from './core/pipes/truncate.pipe';
+import {LessonCreateComponent} from './features/lessons/lesson-create/lesson-create.component';
+import {ModuleListComponent} from './features/modules/module-list/module-list.component';
 
 @NgModule({
   declarations: [
@@ -118,6 +120,8 @@ import {TruncatePipe} from './core/pipes/truncate.pipe';
     FileSizePipe,
     FileUploadComponent,
     TruncatePipe,
+    LessonCreateComponent,
+    ModuleListComponent
   ],
   imports: [
     BrowserModule,

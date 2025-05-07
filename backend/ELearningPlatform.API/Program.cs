@@ -71,6 +71,8 @@ builder.Services.AddCors(options =>
 // Add Services
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<IModuleService, ModuleService>();
+builder.Services.AddScoped<ILessonService, LessonService>();
 builder.Services.AddScoped<IQuizService, QuizService>();
 builder.Services.AddScoped<IExamService, ExamService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();

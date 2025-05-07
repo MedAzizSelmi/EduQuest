@@ -10,17 +10,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c6a3118c-f039-4b9e-9f7a-15d4685b117d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/CoursesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/CoursesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/CourseDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/CourseDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/ELearningPlatform.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/ELearningPlatform.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Services/CourseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/CourseService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.endpoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.sourcelink.json" afterDir="false" />
@@ -29,14 +28,10 @@
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/refint/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/refint/ELearningPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.pack.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/services/course.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/services/course.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/courses/course-create/course-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/courses/course-create/course-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/courses/course-detail/course-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/courses/course-detail/course-detail.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +129,7 @@
       <workItem from="1746537455052" duration="4602000" />
       <workItem from="1746555761514" duration="3328000" />
       <workItem from="1746610027941" duration="3961000" />
+      <workItem from="1746620862023" duration="7593000" />
     </task>
     <servers />
   </component>
