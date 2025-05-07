@@ -50,7 +50,7 @@ namespace ELearningPlatform.API.Services
                 Level = c.Level,
                 ModulesCount = c.Modules.Count,
                 EnrolledStudentsCount = c.UserCourses.Count
-            });
+            }).ToList();
         }
 
         public async Task<CourseDto> GetCourseByIdAsync(int id)

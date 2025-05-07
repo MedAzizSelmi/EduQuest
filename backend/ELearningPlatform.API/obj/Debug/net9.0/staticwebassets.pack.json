@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg"
     },
     {
+      "Id": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\uploads\\courses\\6\\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg",
+      "PackagePath": "staticwebassets\\uploads\\courses\\6\\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

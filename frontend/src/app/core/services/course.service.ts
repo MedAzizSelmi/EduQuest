@@ -38,22 +38,7 @@ export class CourseService {
   }
 
   createCourse(createCourseRequest: CreateCourseRequest): Observable<Course> {
-    const formData = new FormData();
-
-    // Append all fields
-    formData.append('title', createCourseRequest.title);
-    formData.append('description', createCourseRequest.description);
-    formData.append('durationInMinutes', createCourseRequest.durationInMinutes.toString());
-    formData.append('pointsToEarn', createCourseRequest.pointsToEarn.toString());
-    formData.append('category', createCourseRequest.category);
-    formData.append('level', createCourseRequest.level);
-
-    // Optional thumbnail
-    if (createCourseRequest.thumbnailUrl) {
-      formData.append('thumbnailUrl', createCourseRequest.thumbnailUrl);
-    }
-
-    return this.http.post<Course>(this.apiUrl, formData);
+    return this.http.post<Course>(this.apiUrl, createCourseRequest)
   }
 
   updateCourse(id: number, updateCourseRequest: UpdateCourseRequest): Observable<Course> {

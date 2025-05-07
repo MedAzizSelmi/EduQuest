@@ -64,7 +64,7 @@ namespace ELearningPlatform.API.Controllers
 
         [Authorize(Roles = "Teacher,Admin")]
         [HttpPost]
-        public async Task<ActionResult<Course>> CreateCourse([FromForm] CreateCourseDto courseDto)
+        public async Task<ActionResult<Course>> CreateCourse(CreateCourseDto courseDto)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var course = await _courseService.CreateCourseAsync(courseDto, userId);
@@ -73,11 +73,11 @@ namespace ELearningPlatform.API.Controllers
 
         [Authorize(Roles = "Teacher,Admin")]
         [HttpPut("{id}")]
-        public async Task<ActionResult<Course>> UpdateCourse(int id, UpdateCourseDto courseDto)
+        public async Task<ActionResult<Course>> UpdateCourse(int id, [FromBody] UpdateCourseDto courseDto)
         {
-            var course = await _courseService.UpdateCourseAsync(id, courseDto);
-            if (course == null) return NotFound();
-            return Ok(course);
+            var updated = await _courseService.UpdateCourseAsync(id, courseDto);
+            if (updated == null) return NotFound();
+            return Ok(updated);
         }
 
         [Authorize(Roles = "Teacher,Admin")]

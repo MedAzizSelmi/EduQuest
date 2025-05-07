@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Gdm3x77YTJGM1eZNGRuBwDynm1DYDJLXIe4+d7xZzQI=",
+  "Hash": "Rssr80c1GpKIKJM8HDHBSSJweTko+xJM4RF+7YvYs1s=",
   "Source": "ELearningPlatform.API",
   "BasePath": "_content/ELearningPlatform.API",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\uploads\\courses\\6\\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "uploads/courses/6/4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wg30n62jug",
+      "Integrity": "cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\courses\\6\\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg"
     }
   ],
   "Endpoints": [
@@ -125,7 +146,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 18:25:15 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -170,7 +191,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 18:25:15 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -207,7 +228,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:16:38 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -244,7 +265,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:16:38 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -289,7 +310,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:16:38 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -334,7 +355,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:16:38 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -371,7 +392,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:16:38 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -416,7 +437,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 06 May 2025 13:16:38 GMT"
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -427,6 +448,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-YHfLuUbNtYqPD0a2j28V+xTFGP4bI9eFvn4RUsSG/PM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/courses/6/4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\uploads\\courses\\6\\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/courses/6/4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.wg30n62jug.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\uploads\\courses\\6\\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19112"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 09:25:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wg30n62jug"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/courses/6/4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cL/3tA1dcYj8dYIchFY5INT4x7k5Fniue5O8hySrj0I="
         }
       ]
     }

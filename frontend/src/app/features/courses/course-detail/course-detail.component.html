@@ -6,12 +6,12 @@
 
   <div *ngIf="!loading && course" class="course-content">
     <!-- Course Header -->
-    <div class="course-header" [style.backgroundImage]="'url(' + (course.thumbnailUrl || '/assets/images/course-placeholder.jpg') + ')'">
+    <div class="course-header" [style.backgroundImage]="'url(' + (course.thumbnailUrl || 'placeholder.jpg') + ')'">
       <div class="header-overlay">
         <div class="header-content">
           <h1>{{course.title}}</h1>
           <p class="teacher">Instructor: {{course.teacherName}}</p>
-          
+
           <div class="course-meta">
             <div class="meta-item">
               <mat-icon>category</mat-icon>
@@ -82,7 +82,7 @@
         <div class="modules-sidebar">
           <h3>Course Content</h3>
           <mat-nav-list>
-            <mat-list-item *ngFor="let module of course.modules" 
+            <mat-list-item *ngFor="let module of course.modules"
                           [class.active]="activeModule?.id === module.id"
                           (click)="setActiveModule(module)">
               <mat-icon matListItemIcon>folder</mat-icon>
@@ -101,7 +101,7 @@
 
           <!-- Lesson List -->
           <mat-accordion *ngIf="activeModule?.lessons?.length">
-            <mat-expansion-panel *ngFor="let lesson of activeModule?.lessons" 
+            <mat-expansion-panel *ngFor="let lesson of activeModule?.lessons"
                                [expanded]="activeLesson?.id === lesson.id"
                                (opened)="setActiveLesson(lesson)">
               <mat-expansion-panel-header>

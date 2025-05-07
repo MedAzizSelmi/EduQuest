@@ -45,8 +45,8 @@ namespace ELearningPlatform.API.DTOs
     public class UpdateCourseDto
     {
         public string Title { get; set; }
-        public string Description { get; set; }
-        public string ThumbnailUrl { get; set; }
+        public string? Description { get; set; }
+        public string? ThumbnailUrl { get; set; }
         public CourseStatus? Status { get; set; }
         public int? DurationInMinutes { get; set; }
         public int? PointsToEarn { get; set; }

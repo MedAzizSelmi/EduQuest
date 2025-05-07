@@ -12,11 +12,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/CoursesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Controllers/CoursesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/CourseDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/CourseDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Models/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Models/Course.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Services/CourseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/CourseService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Services/ICourseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/ICourseService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
@@ -37,10 +34,9 @@
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/components/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/components/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/services/course.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/services/course.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/courses/course-create/course-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/courses/course-create/course-create.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +133,7 @@
       <workItem from="1746374401190" duration="3667000" />
       <workItem from="1746537455052" duration="4602000" />
       <workItem from="1746555761514" duration="3328000" />
+      <workItem from="1746610027941" duration="3961000" />
     </task>
     <servers />
   </component>
