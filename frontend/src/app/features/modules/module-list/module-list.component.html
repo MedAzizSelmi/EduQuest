@@ -4,7 +4,7 @@
       <mat-icon>arrow_back</mat-icon>
     </button>
     <h1>Course Modules</h1>
-    <button *ngIf="isTeacherOrAdmin" mat-raised-button color="primary" (click)="createLesson()">
+    <button *ngIf="isTeacherOrAdmin" mat-raised-button color="primary" (click)="createModule()">
       <mat-icon>add</mat-icon>
       Create Module
     </button>
@@ -37,10 +37,9 @@
       </mat-card-content>
 
       <mat-card-actions>
-        <button mat-button color="primary" (click)="viewModule(module)">VIEW DETAILS</button>
+        <button mat-button color="primary" (click)="viewLessons(module)">VIEW Lessons</button>
         <button *ngIf="isTeacherOrAdmin" mat-button color="accent" (click)="editModule(module)">EDIT</button>
         <button *ngIf="isTeacherOrAdmin" mat-button color="warn" (click)="deleteModule(module)">DELETE</button>
-        <button *ngIf="!isTeacherOrAdmin" mat-raised-button color="primary" (click)="readModule(module)">Read Module</button>
       </mat-card-actions>
     </mat-card>
 

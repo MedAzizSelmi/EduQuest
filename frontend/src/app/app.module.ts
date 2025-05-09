@@ -78,6 +78,11 @@ import {FileUploadComponent} from './features/Attachments/file-upload.component'
 import {TruncatePipe} from './core/pipes/truncate.pipe';
 import {LessonCreateComponent} from './features/lessons/lesson-create/lesson-create.component';
 import {ModuleListComponent} from './features/modules/module-list/module-list.component';
+import {ModuleCreateComponent} from './features/modules/module-create/module-create.component';
+import {LessonListComponent} from './features/lessons/lesson-list/lesson-list.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {ModuleEditComponent} from './features/modules/module-edit/module-edit.component';
+import {LessonEditComponent} from './features/lessons/lesson-edit/lesson-edit.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +126,11 @@ import {ModuleListComponent} from './features/modules/module-list/module-list.co
     FileUploadComponent,
     TruncatePipe,
     LessonCreateComponent,
-    ModuleListComponent
+    ModuleListComponent,
+    ModuleCreateComponent,
+    LessonListComponent,
+    ModuleEditComponent,
+    LessonEditComponent
   ],
   imports: [
     BrowserModule,
@@ -157,7 +166,8 @@ import {ModuleListComponent} from './features/modules/module-list/module-list.co
     MatButtonToggleModule,
     MatRadioGroup,
     MatRadioButton,
-    MatLine
+    MatLine,
+    MatSlideToggleModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

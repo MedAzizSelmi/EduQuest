@@ -1,0 +1,53 @@
+<div class="lesson-list-container">
+  <div class="header">
+    <button mat-icon-button (click)="goBackToCourse()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h1>Course Lessons</h1>
+    <button *ngIf="isTeacherOrAdmin" mat-raised-button color="primary" (click)="createLesson()">
+      <mat-icon>add</mat-icon>
+      Create Lesson
+    </button>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="!loading" class="lesson-grid">
+    <mat-card *ngFor="let lesson of lessons" class="lesson-card">
+      <mat-card-header>
+        <mat-card-title>{{lesson.title}}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="lesson-meta">
+          <div class="meta-item">
+            <mat-icon>format_list_numbered</mat-icon>
+            <span>{{lesson.order}}</span>
+          </div>
+          <div class="meta-item">
+            <mat-icon>hourglass_bottom</mat-icon>
+            <span>{{lesson.durationInMinutes}} minutes</span>
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button *ngIf="isTeacherOrAdmin" mat-button color="accent" (click)="editLesson(lesson)">EDIT</button>
+        <button *ngIf="isTeacherOrAdmin" mat-button color="warn" (click)="deleteLesson(lesson)">DELETE</button>
+        <button *ngIf="!isTeacherOrAdmin" mat-raised-button color="primary" (click)="readLesson(lesson)">Read Lesson</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- No Lessons Message -->
+    <div *ngIf="lessons.length === 0" class="no-lessons">
+      <mat-icon>book</mat-icon>
+      <p>No Lessons available for this course.</p>
+      <button *ngIf="isTeacherOrAdmin" mat-raised-button color="primary" (click)="createLesson()">
+        Create First Lesson
+      </button>
+    </div>
+  </div>
+</div>

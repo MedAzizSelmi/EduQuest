@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ELearningPlatform.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/courses/{courseId}/modules/{moduleId}/[controller]")]
     [ApiController]
     public class LessonsController : ControllerBase
     {
@@ -33,6 +33,13 @@ namespace ELearningPlatform.API.Controllers
             var lesson = await _lessonService.GetLesson(id);
             if (lesson == null) return NotFound();
             return Ok(lesson);
+        }
+        
+        [HttpGet] // Handles GET /api/courses/{courseId}/modules/{moduleId}/lessons
+        public async Task<ActionResult<List<LessonDto>>> GetLessonsByModule(int courseId, int moduleId)
+        {
+            var lessons = await _lessonService.GetLessonsByModule(courseId, moduleId);
+            return Ok(lessons);
         }
 
         [Authorize(Roles = "Teacher,Admin")]

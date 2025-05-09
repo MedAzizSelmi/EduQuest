@@ -1,5 +1,4 @@
-﻿// Services/LessonService.cs
-using ELearningPlatform.API.Data;
+﻿using ELearningPlatform.API.Data;
 using ELearningPlatform.API.DTOs;
 using ELearningPlatform.API.Models;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +16,7 @@ namespace ELearningPlatform.API.Services
             _context = context;
         }
 
-        public async Task<Lesson> CreateLesson(CreateLessonDto lessonDto)
+        public async Task<LessonDto> CreateLesson(CreateLessonDto lessonDto)
         {
             var lesson = new Lesson
             {
@@ -35,14 +34,26 @@ namespace ELearningPlatform.API.Services
             _context.Lessons.Add(lesson);
             await _context.SaveChangesAsync();
 
-            return lesson;
+            return MapToLessonDto(lesson);
         }
 
-        public async Task<Lesson> GetLesson(int id)
+        public async Task<LessonDto> GetLesson(int id)
         {
-            return await _context.Lessons
+            var lesson = await _context.Lessons
                 .Include(l => l.Module)
                 .FirstOrDefaultAsync(l => l.Id == id);
+
+            return lesson == null ? null : MapToLessonDto(lesson);
+        }
+
+        public async Task<List<LessonDto>> GetLessonsByModule(int courseId, int moduleId)
+        {
+            var lessons = await _context.Lessons
+                .Include(l => l.Module)
+                .Where(l => l.ModuleId == moduleId && l.Module.CourseId == courseId)
+                .ToListAsync();
+
+            return lessons.Select(MapToLessonDto).ToList();
         }
 
         public async Task<bool> DeleteLesson(int id)
@@ -54,7 +65,7 @@ namespace ELearningPlatform.API.Services
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<Lesson> UpdateLesson(int id, UpdateLessonDto lessonDto)
+        public async Task<LessonDto> UpdateLesson(int id, UpdateLessonDto lessonDto)
         {
             var lesson = await _context.Lessons.FindAsync(id);
             if (lesson == null) return null;
@@ -68,7 +79,24 @@ namespace ELearningPlatform.API.Services
             lesson.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
-            return lesson;
+            return MapToLessonDto(lesson);
+        }
+
+        private LessonDto MapToLessonDto(Lesson lesson)
+        {
+            return new LessonDto
+            {
+                Id = lesson.Id,
+                Title = lesson.Title,
+                Content = lesson.Content,
+                VideoUrl = lesson.VideoUrl,
+                Order = lesson.Order,
+                DurationInMinutes = lesson.DurationInMinutes,
+                ModuleId = lesson.ModuleId,
+                CreatedAt = lesson.CreatedAt,
+                UpdatedAt = lesson.UpdatedAt,
+                Type = lesson.Type
+            };
         }
     }
 }

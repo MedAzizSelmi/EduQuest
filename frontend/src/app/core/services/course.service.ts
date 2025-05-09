@@ -72,40 +72,54 @@ export class CourseService {
     return this.http.get<Module[]>(`${this.apiUrl}/${courseId}/modules`)
   }
 
-  getModuleById(id: number): Observable<Module> {
-    return this.http.get<Module>(`${environment.apiUrl}/api/modules/${id}`)
+  getModuleById(courseId: number, moduleId: number): Observable<Module> {
+    return this.http.get<Module>(
+      `${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}`
+    );
   }
 
   createModule(createModuleRequest: CreateModuleRequest): Observable<Module> {
-    return this.http.post<Module>(`${environment.apiUrl}/api/modules`, createModuleRequest)
+    return this.http.post<Module>(`${environment.apiUrl}/api/courses/${createModuleRequest.courseId}/modules`, createModuleRequest);
   }
 
-  updateModule(id: number, updateModuleRequest: UpdateModuleRequest): Observable<Module> {
-    return this.http.put<Module>(`${environment.apiUrl}/api/modules/${id}`, updateModuleRequest)
+
+  updateModule(courseId: number, moduleId: number, updateModuleRequest: UpdateModuleRequest): Observable<Module> {
+    return this.http.put<Module>(`${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}`, updateModuleRequest)
   }
 
-  deleteModule(id: number): Observable<void> {
-    return this.http.delete<void>(`${environment.apiUrl}/api/modules/${id}`)
+  deleteModule(courseId: number, moduleId: number): Observable<void> {
+    return this.http.delete<void>(`${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}`);
   }
 
   // Lesson endpoints
-  getLessons(moduleId: number): Observable<Lesson[]> {
-    return this.http.get<Lesson[]>(`${environment.apiUrl}/api/modules/${moduleId}/lessons`)
+  getLessons(courseId: number, moduleId: number): Observable<Lesson[]> {
+    return this.http.get<Lesson[]>(`${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}/lessons`);
   }
 
-  getLessonById(id: number): Observable<Lesson> {
-    return this.http.get<Lesson>(`${environment.apiUrl}/api/lessons/${id}`)
+
+  getLessonById(courseId: number, moduleId: number, lessonId: number): Observable<Lesson> {
+    return this.http.get<Lesson>(
+      `${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}/lessons/${lessonId}`
+    );
   }
 
   createLesson(createLessonRequest: CreateLessonRequest): Observable<Lesson> {
-    return this.http.post<Lesson>(`${environment.apiUrl}/api/lessons`, createLessonRequest)
+    return this.http.post<Lesson>(`${environment.apiUrl}/api/courses/${createLessonRequest.courseId}/modules/${createLessonRequest.moduleId}/lessons`, createLessonRequest)
   }
 
-  updateLesson(id: number, updateLessonRequest: UpdateLessonRequest): Observable<Lesson> {
-    return this.http.put<Lesson>(`${environment.apiUrl}/api/lessons/${id}`, updateLessonRequest)
+  updateLesson(
+    courseId: number,
+    moduleId: number,
+    lessonId: number,
+    updateLessonRequest: UpdateLessonRequest
+  ): Observable<Lesson> {
+    return this.http.put<Lesson>(
+      `${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}/lessons/${lessonId}`,
+      updateLessonRequest
+    );
   }
 
-  deleteLesson(id: number): Observable<void> {
-    return this.http.delete<void>(`${environment.apiUrl}/api/lessons/${id}`)
+  deleteLesson(courseId: number, moduleId: number, lessonId: number): Observable<void> {
+    return this.http.delete<void>(`${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}/lessons/${lessonId}`)
   }
 }

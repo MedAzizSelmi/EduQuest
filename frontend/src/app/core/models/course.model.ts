@@ -95,6 +95,7 @@ export interface CreateLessonRequest {
   order: number
   durationInMinutes: number
   moduleId: number
+  courseId: number
   type: LessonType
 }
 

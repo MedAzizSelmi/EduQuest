@@ -7,10 +7,10 @@ namespace ELearningPlatform.API.Services
 {
     public interface IModuleService
     {
-        Task<Module> CreateModule(CreateModuleDto moduleDto);
-        Task<Module> GetModule(int id);
-        Task<List<Module>> GetModulesByCourse(int courseId);
-        Task<Module> UpdateModule(int id, UpdateModuleDto moduleDto);
+        Task<ModuleDto> CreateModule(CreateModuleDto moduleDto);
+        Task<ModuleDto> GetModule(int id);
+        Task<List<ModuleDto>> GetModulesByCourse(int courseId);
+        Task<ModuleDto> UpdateModule(int id, UpdateModuleDto moduleDto);
         Task<bool> DeleteModule(int id);
     }
 }

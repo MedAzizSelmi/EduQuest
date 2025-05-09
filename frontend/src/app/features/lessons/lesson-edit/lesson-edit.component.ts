@@ -3,18 +3,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {CourseService} from '../../../core/services/course.service';
-import {LessonType} from '../../../core/models/course.model';
+import {Lesson, LessonType} from '../../../core/models/course.model';
 
 @Component({
-  selector: 'app-lesson-create',
-  templateUrl: './lesson-create.component.html',
+  selector: 'app-lesson-edit',
+  templateUrl: './lesson-edit.component.html',
   standalone: false,
-  styleUrls: ['./lesson-create.component.scss']
+  styleUrls: ['./lesson-edit.component.scss']
 })
-export class LessonCreateComponent implements OnInit {
+export class LessonEditComponent implements OnInit {
   lessonForm: FormGroup;
+  loading = false
   courseId!: number;
   moduleId!: number;
+  lessonId!: number;
+  lesson: Lesson | null = null
   lessonTypes = Object.values(LessonType);
   isLoading = false;
 
@@ -38,6 +41,26 @@ export class LessonCreateComponent implements OnInit {
   ngOnInit(): void {
     this.courseId = +this.route.snapshot.params['courseId'];
     this.moduleId = +this.route.snapshot.params['moduleId'];
+    this.lessonId = +this.route.snapshot.params['lessonId'];
+    this.loadLesson()
+  }
+
+  loadLesson(): void {
+    this.loading = true
+    this.lessonService.getLessonById(this.courseId, this.moduleId, this.lessonId).subscribe({
+      next: (lesson) => {
+        this.lesson = lesson
+        this.lessonForm.patchValue({
+          title: lesson.title,
+          description: lesson.content,
+          videoUrl: lesson.videoUrl,
+          type: lesson.type,
+          durationInMinutes: lesson.durationInMinutes,
+          order: lesson.order,
+        })
+        this.loading = false
+      },
+    })
   }
 
   onSubmit(): void {
@@ -49,19 +72,19 @@ export class LessonCreateComponent implements OnInit {
       moduleId: this.moduleId
     };
 
-    this.lessonService.createLesson(lessonData).subscribe({
+    this.lessonService.updateLesson(this.courseId, this.moduleId, this.lessonId,lessonData).subscribe({
       next: () => {
-        this.snackBar.open('Lesson created successfully', 'Close', { duration: 3000 });
-        this.router.navigate(['/modules', this.moduleId, 'lessons']);
+        this.snackBar.open('Lesson updated successfully', 'Close', { duration: 3000 });
+        this.router.navigate(['/courses', this.courseId, "modules", this.moduleId, 'lessons']);
       },
       error: (err) => {
         this.isLoading = false;
-        this.snackBar.open(`Error creating lesson: ${err.message}`, 'Close', { duration: 5000 });
+        this.snackBar.open(`Error updating lesson: ${err.message}`, 'Close', { duration: 5000 });
       }
     });
   }
 
   onCancel(): void {
-    this.router.navigate(['/courses', this.courseId]);
+    this.router.navigate(['/courses', this.courseId, "modules", this.moduleId, 'lessons']);
   }
 }

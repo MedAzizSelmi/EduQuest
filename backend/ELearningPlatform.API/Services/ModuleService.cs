@@ -18,7 +18,7 @@ namespace ELearningPlatform.API.Services
             _context = context;
         }
 
-        public async Task<Module> CreateModule(CreateModuleDto moduleDto)
+        public async Task<ModuleDto> CreateModule(CreateModuleDto moduleDto)
         {
             var module = new Module
             {
@@ -32,26 +32,31 @@ namespace ELearningPlatform.API.Services
 
             _context.Modules.Add(module);
             await _context.SaveChangesAsync();
-            return module;
+
+            return MapToModuleDto(module);
         }
 
-        public async Task<Module> GetModule(int id)
+        public async Task<ModuleDto> GetModule(int id)
         {
-            return await _context.Modules
+            var module = await _context.Modules
                 .Include(m => m.Lessons)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
+            return module == null ? null : MapToModuleDto(module);
         }
 
-        public async Task<List<Module>> GetModulesByCourse(int courseId)
+        public async Task<List<ModuleDto>> GetModulesByCourse(int courseId)
         {
-            return await _context.Modules
+            var modules = await _context.Modules
                 .Where(m => m.CourseId == courseId)
                 .Include(m => m.Lessons)
                 .OrderBy(m => m.Order)
                 .ToListAsync();
+
+            return modules.Select(MapToModuleDto).ToList();
         }
 
-        public async Task<Module> UpdateModule(int id, UpdateModuleDto moduleDto)
+        public async Task<ModuleDto> UpdateModule(int id, UpdateModuleDto moduleDto)
         {
             var module = await _context.Modules.FindAsync(id);
             if (module == null) return null;
@@ -62,7 +67,7 @@ namespace ELearningPlatform.API.Services
             module.UpdatedAt = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
-            return module;
+            return MapToModuleDto(module);
         }
 
         public async Task<bool> DeleteModule(int id)
@@ -72,6 +77,33 @@ namespace ELearningPlatform.API.Services
 
             _context.Modules.Remove(module);
             return await _context.SaveChangesAsync() > 0;
+        }
+
+        private ModuleDto MapToModuleDto(Module module)
+        {
+            return new ModuleDto
+            {
+                Id = module.Id,
+                Title = module.Title,
+                Description = module.Description,
+                Order = module.Order,
+                CourseId = module.CourseId,
+                CreatedAt = module.CreatedAt,
+                UpdatedAt = module.UpdatedAt,
+                Lessons = module.Lessons?.Select(l => new LessonDto
+                {
+                    Id = l.Id,
+                    Title = l.Title,
+                    Content = l.Content,
+                    VideoUrl = l.VideoUrl,
+                    Order = l.Order,
+                    DurationInMinutes = l.DurationInMinutes,
+                    ModuleId = l.ModuleId,
+                    CreatedAt = l.CreatedAt,
+                    UpdatedAt = l.UpdatedAt,
+                    Type = l.Type
+                }).ToList()
+            };
         }
     }
 }

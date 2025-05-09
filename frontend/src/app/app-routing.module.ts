@@ -35,6 +35,10 @@ import { CodingGamesComponent } from "./features/gamification/coding-games/codin
 import { CodingGameDetailComponent } from "./features/gamification/coding-games/coding-game-detail/coding-game-detail.component"
 import {LessonCreateComponent} from './features/lessons/lesson-create/lesson-create.component';
 import {ModuleListComponent} from './features/modules/module-list/module-list.component';
+import {ModuleCreateComponent} from './features/modules/module-create/module-create.component';
+import {LessonListComponent} from './features/lessons/lesson-list/lesson-list.component';
+import {ModuleEditComponent} from './features/modules/module-edit/module-edit.component';
+import {LessonEditComponent} from './features/lessons/lesson-edit/lesson-edit.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -122,11 +126,39 @@ const routes: Routes = [
     component: ModuleListComponent
   },
   {
-    path: 'courses/:courseId/lessons/new',
+    path: 'courses/:courseId/modules/create',
+    component: ModuleCreateComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['Teacher', 'Admin'] }
+  },
+  {
+    path: "courses/:courseId/modules/:moduleId/edit",
+    component: ModuleEditComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ["Teacher", "Admin"] },
+  },
+  {
+    path: "courses/:courseId/modules/:moduleId/lessons",
+    component: LessonListComponent
+  },
+  {
+    path: 'courses/:courseId/modules/:moduleId/lessons/new',
     component: LessonCreateComponent,
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ['Teacher', 'Admin'] }
   },
+  {
+    path: "courses/:courseId/modules/:moduleId/lessons/:lessonId/edit",
+    component: LessonEditComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ["Teacher", "Admin"] },
+  },
+  /*{
+    path: "courses/:courseId/modules/:moduleId/lessons/:lessonId/read",
+    component: LessonReadComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ["Student"] },
+  },*/
   // Gamification Routes
   {
     path: "gamification",

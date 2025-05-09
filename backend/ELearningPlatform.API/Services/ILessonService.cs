@@ -7,9 +7,10 @@ namespace ELearningPlatform.API.Services
 {
     public interface ILessonService
     {
-        Task<Lesson> CreateLesson(CreateLessonDto lessonDto);
-        Task<Lesson> GetLesson(int id);
+        Task<LessonDto> CreateLesson(CreateLessonDto lessonDto);
+        Task<LessonDto> GetLesson(int id);
+        Task<List<LessonDto>> GetLessonsByModule(int courseId, int moduleId);
         Task<bool> DeleteLesson(int id);
-        Task<Lesson> UpdateLesson(int id, UpdateLessonDto lessonDto);
+        Task<LessonDto> UpdateLesson(int id, UpdateLessonDto lessonDto);
     }
 }

@@ -10,7 +10,10 @@ namespace ELearningPlatform.API.DTOs
         public string VideoUrl { get; set; }
         public int Order { get; set; }
         public int DurationInMinutes { get; set; }
-        public string Type { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public LessonType Type { get; set; }
+        public int ModuleId { get; set; }
     }
 
     public class CreateLessonDto

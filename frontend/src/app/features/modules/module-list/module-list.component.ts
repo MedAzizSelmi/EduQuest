@@ -40,8 +40,8 @@ export class ModuleListComponent implements OnInit {
     );
   }
 
-  viewModule(module: Module): void {
-    this.router.navigate(["/modules", module.id])
+  viewLessons(module: Module): void {
+    this.router.navigate(["/courses", this.courseId, "modules", module.id, "lessons"]);
   }
 
   createModule(): void {
@@ -49,12 +49,12 @@ export class ModuleListComponent implements OnInit {
   }
 
   editModule(module: Module): void {
-    this.router.navigate(["/modules", module.id, "edit"])
+    this.router.navigate(["/courses", this.courseId, "modules", module.id, "edit"])
   }
 
   deleteModule(module: Module): void {
     if (confirm(`Are you sure you want to delete module "${module.title}"?`)) {
-      this.moduleService.deleteModule(module.id).subscribe({
+      this.moduleService.deleteModule(this.courseId, module.id).subscribe({
         next: () => {
           this.snackBar.open("Module deleted successfully", "Close", {
             duration: 3000,
@@ -70,21 +70,17 @@ export class ModuleListComponent implements OnInit {
     }
   }
 
-  readModule(module: Module): void {
+  /*readModule(module: Module): void {
     this.router.navigate(["/modules", module.id, "read"])
-  }
+  }*/
 
-  viewLessons(courseId: number): void {
+  /*viewLessons(courseId: number): void {
     if(!this.module) return
     this.router.navigate(['/courses', this.module.id, 'modules']);
-  }
+  }*/
 
   goBackToCourse(): void {
     this.router.navigate(["/courses", this.courseId])
-  }
-
-  createLesson(): void {
-    this.router.navigate(['/courses', this.courseId, 'lessons', 'new'])
   }
 
 }

@@ -94,7 +94,7 @@ namespace ELearningPlatform.API.Services
                     {
                         Id = l.Id,
                         Title = l.Title,
-                        Type = l.Type.ToString(),
+                        Type = l.Type,
                         DurationInMinutes = l.DurationInMinutes,
                         Order = l.Order
                     }).ToList()
