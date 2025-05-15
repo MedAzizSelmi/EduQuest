@@ -39,6 +39,9 @@ import {ModuleCreateComponent} from './features/modules/module-create/module-cre
 import {LessonListComponent} from './features/lessons/lesson-list/lesson-list.component';
 import {ModuleEditComponent} from './features/modules/module-edit/module-edit.component';
 import {LessonEditComponent} from './features/lessons/lesson-edit/lesson-edit.component';
+import {QuestionManagementComponent} from './features/questions/question-management/question-management.component';
+import {QuestionCreateComponent} from './features/questions/question-create/question-create.component';
+import {QuestionEditComponent} from './features/questions/question-edit/question-edit.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -159,6 +162,26 @@ const routes: Routes = [
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ["Student"] },
   },*/
+  {
+    path: 'quizzes/:quizId/edit/questions',
+    component: QuestionManagementComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['Teacher', 'Admin'] },
+    children: [
+      {
+        path: 'create',
+        component: QuestionCreateComponent,
+        canActivate: [AuthGuard, RoleGuard],
+        data: { roles: ['Teacher', 'Admin'] }
+      },
+      {
+        path: 'edit/:questionId',
+        component: QuestionEditComponent,
+        canActivate: [AuthGuard, RoleGuard],
+        data: { roles: ['Teacher', 'Admin'] }
+      }
+    ]
+  },
   // Gamification Routes
   {
     path: "gamification",

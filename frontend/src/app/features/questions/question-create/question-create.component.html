@@ -1,0 +1,8 @@
+<!-- question-create.component.html -->
+<div class="question-create-container">
+  <h1>Create New Question</h1>
+  <app-question-form
+    (submitForm)="handleSubmit($event)"
+    (onCancel)="onCancel()">
+  </app-question-form>
+</div>

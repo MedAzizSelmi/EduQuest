@@ -1,20 +1,21 @@
 import { Injectable } from "@angular/core"
-import { HttpClient } from "@angular/common/http"
+import {HttpClient, HttpHeaders} from "@angular/common/http"
 import type { Observable } from "rxjs"
 import {
   Quiz,
   CreateQuizRequest,
   UpdateQuizRequest,
-  Question,
-  CreateQuestionRequest,
-  UpdateQuestionRequest,
-  Answer,
-  CreateAnswerRequest,
-  UpdateAnswerRequest,
   SubmitQuizRequest,
   QuizResult,
 } from "../models/quiz.model"
 import { environment } from "../../../environments/environment"
+import {
+  Answer,
+  CreateAnswerRequest,
+  CreateQuestionRequest,
+  Question, UpdateAnswerRequest,
+  UpdateQuestionRequest
+} from '../models/question.model';
 
 @Injectable({
   providedIn: "root",
@@ -57,6 +58,14 @@ export class QuizService {
   }
 
   // Question endpoints
+  getQuestionsByQuiz(quizId: number): Observable<Question[]> {
+    return this.http.get<Question[]>(`${this.apiUrl}/${quizId}/questions`);
+  }
+
+  getQuestion(quizId: number, questionId: number): Observable<Question> {
+    return this.http.get<Question>(`${this.apiUrl}/${quizId}/questions/${questionId}`);
+  }
+
   getQuestions(quizId: number): Observable<Question[]> {
     return this.http.get<Question[]>(`${environment.apiUrl}/api/questions/quiz/${quizId}`)
   }
@@ -66,15 +75,24 @@ export class QuizService {
   }
 
   createQuestion(createQuestionRequest: CreateQuestionRequest): Observable<Question> {
-    return this.http.post<Question>(`${environment.apiUrl}/api/questions`, createQuestionRequest)
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.getAuthToken()}`
+    });
+    return this.http.post<Question>(`${this.apiUrl}/questions/create`, createQuestionRequest, {headers})
   }
 
-  updateQuestion(id: number, updateQuestionRequest: UpdateQuestionRequest): Observable<Question> {
-    return this.http.put<Question>(`${environment.apiUrl}/api/questions/${id}`, updateQuestionRequest)
+  private getAuthToken(): string {
+    // Implement your actual token retrieval logic
+    return localStorage.getItem('auth_token') || '';
   }
 
-  deleteQuestion(id: number): Observable<void> {
-    return this.http.delete<void>(`${environment.apiUrl}/api/questions/${id}`)
+  updateQuestion(quizId: number, questionId: number, updateQuestionRequest: UpdateQuestionRequest): Observable<Question> {
+    return this.http.put<Question>(`${this.apiUrl}/${quizId}/questions/${questionId}`, updateQuestionRequest)
+  }
+
+  deleteQuestion(quizId: number, id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${quizId}/questions/${id}`)
   }
 
   // Answer endpoints

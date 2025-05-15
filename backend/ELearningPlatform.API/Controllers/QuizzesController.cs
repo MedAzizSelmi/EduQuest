@@ -60,6 +60,50 @@ namespace ELearningPlatform.API.Controllers
             if (!result) return NotFound();
             return NoContent();
         }
+        
+        [HttpGet("{quizId}/questions")]
+        public async Task<ActionResult<IEnumerable<QuestionDto>>> GetQuestionsByQuiz(int quizId)
+        {
+            var questions = await _quizService.GetQuestionsByQuizIdAsync(quizId);
+            if (questions == null || !questions.Any())
+                return NotFound();
+            return Ok(questions);
+        }
+        
+        [HttpGet("{quizId}/questions/{id}")]
+        public async Task<ActionResult<QuestionDto>> GetQuestion(int quizId, int id)
+        {
+            var question = await _quizService.GetQuestionByIdAsync(id);
+            if (question == null) return NotFound();
+            return Ok(question);
+        }
+
+        
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpPost("questions/create")]
+        public async Task<ActionResult<Question>> CreateQuestion(CreateQuestionDto questionDto)
+        {
+            var question = await _quizService.CreateQuestionAsync(questionDto);
+            return CreatedAtAction(nameof(GetQuestionsByQuiz), new { quizId = question.QuizId }, question);
+        }
+
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpPut("{quizId}/questions/{id}")]
+        public async Task<ActionResult<Question>> UpdateQuestion(int id, UpdateQuestionDto questionDto)
+        {
+            var question = await _quizService.UpdateQuestionAsync(id, questionDto);
+            if (question == null) return NotFound();
+            return Ok(question);
+        }
+
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpDelete("{quizId}/questions/{id}")]
+        public async Task<ActionResult> DeleteQuestion(int id)
+        {
+            var result = await _quizService.DeleteQuestionAsync(id);
+            if (!result) return NotFound();
+            return NoContent();
+        }
 
         [Authorize(Roles = "Student")]
         [HttpPost("{id}/submit")]

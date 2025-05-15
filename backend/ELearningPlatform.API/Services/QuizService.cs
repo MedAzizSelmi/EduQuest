@@ -114,6 +114,68 @@ namespace ELearningPlatform.API.Services
             _context.Quizzes.Remove(quiz);
             return await _context.SaveChangesAsync() > 0;
         }
+        
+        public async Task<QuestionDto> GetQuestionByIdAsync(int id)
+        {
+            var question = await _context.Questions
+                .Include(q => q.Answers)
+                .FirstOrDefaultAsync(q => q.Id == id);
+
+            if (question == null) return null;
+
+            return new QuestionDto
+            {
+                Id = question.Id,
+                Text = question.Text,
+                Type = question.Type.ToString(),
+                Points = question.Points,
+                Answers = question.Answers.Select(a => new AnswerDto
+                {
+                    Id = a.Id,
+                    Text = a.Text,
+                    IsCorrect = a.IsCorrect
+                }).ToList()
+            };
+        }
+
+        
+        public async Task<Question> CreateQuestionAsync(CreateQuestionDto questionDto)
+        {
+            var question = new Question
+            {
+                Text = questionDto.Text,
+                Points = questionDto.Points,
+                QuizId = questionDto.QuizId,
+                Type = questionDto.Type,
+            };
+
+            _context.Questions.Add(question);
+            await _context.SaveChangesAsync();
+            return question;
+        }
+
+        public async Task<Question> UpdateQuestionAsync(int id, UpdateQuestionDto questionDto)
+        {
+            var question = await _context.Questions.FindAsync(id);
+            if (question == null) return null;
+            
+            question.Text = questionDto.Text ?? question.Text;
+            question.Points = questionDto.Points ?? question.Points;
+            question.Type = questionDto.Type ?? question.Type;
+            question.UpdatedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return question;
+        }
+
+        public async Task<bool> DeleteQuestionAsync(int id)
+        {
+            var question = await _context.Questions.FindAsync(id);
+            if (question == null) return false;
+
+            _context.Questions.Remove(question);
+            return await _context.SaveChangesAsync() > 0;
+        }
 
         public async Task<QuizResultDto> SubmitQuizAsync(int quizId, string userId, SubmitQuizDto submitQuizDto)
         {
@@ -213,6 +275,27 @@ namespace ELearningPlatform.API.Services
                 EndTime = DateTime.UtcNow,
                 AttemptsCount = userQuiz.AttemptsCount
             };
+        }
+        
+        public async Task<IEnumerable<QuestionDto>> GetQuestionsByQuizIdAsync(int quizId)
+        {
+            return await _context.Questions
+                .Where(q => q.QuizId == quizId)
+                .Include(q => q.Answers) // Include answers if you need them
+                .Select(q => new QuestionDto
+                {
+                    Id = q.Id,
+                    Text = q.Text,
+                    Type = q.Type.ToString(),
+                    Points = q.Points,
+                    Answers = q.Answers.Select(a => new AnswerDto
+                    {
+                        Id = a.Id,
+                        Text = a.Text,
+                        IsCorrect = a.IsCorrect
+                    }).ToList()
+                })
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<QuizResultDto>> GetUserQuizResultsAsync(string userId)

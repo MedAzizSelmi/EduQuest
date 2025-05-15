@@ -3,8 +3,9 @@ import { FormBuilder, FormGroup, FormArray } from "@angular/forms"
 import { ActivatedRoute, Router } from "@angular/router"
 import { MatSnackBar } from "@angular/material/snack-bar"
 import { QuizService } from "../../../core/services/quiz.service"
-import { Quiz, Question, SubmitQuizRequest } from "../../../core/models/quiz.model"
+import { Quiz, SubmitQuizRequest } from "../../../core/models/quiz.model"
 import { Subscription, interval } from "rxjs"
+import {Question} from '../../../core/models/question.model';
 
 @Component({
     selector: "app-quiz-take",

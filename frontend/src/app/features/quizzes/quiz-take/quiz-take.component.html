@@ -12,7 +12,7 @@
       </mat-card-header>
       <mat-card-content>
         <p>{{quiz.description}}</p>
-        
+
         <div class="quiz-meta">
           <div class="meta-item">
             <mat-icon>timer</mat-icon>
@@ -31,7 +31,7 @@
             <span><strong>Points to Earn:</strong> {{quiz.pointsToEarn}}</span>
           </div>
         </div>
-        
+
         <div class="quiz-instructions">
           <h3>Instructions:</h3>
           <ul>
@@ -58,7 +58,7 @@
         <span>{{formatTimeLeft()}}</span>
       </div>
     </div>
-    
+
     <form [formGroup]="quizForm" (ngSubmit)="submitQuiz()">
       <div formArrayName="answers">
         <mat-card *ngFor="let question of quiz.questions; let i = index" class="question-card">
@@ -68,7 +68,7 @@
           </mat-card-header>
           <mat-card-content>
             <p class="question-text">{{question.text}}</p>
-            
+
             <div [formGroupName]="i" class="answer-section">
               <!-- Multiple Choice Question -->
               <div *ngIf="question.type === 'MultipleChoice'">
@@ -78,7 +78,7 @@
                   </mat-list-option>
                 </mat-selection-list>
               </div>
-              
+
               <!-- True/False Question -->
               <div *ngIf="question.type === 'TrueFalse'">
                 <mat-radio-group formControlName="answerIds">
@@ -87,7 +87,7 @@
                   </mat-radio-button>
                 </mat-radio-group>
               </div>
-              
+
               <!-- Short Answer Question -->
               <div *ngIf="question.type === 'ShortAnswer'">
                 <mat-form-field appearance="outline" class="full-width">
@@ -95,7 +95,7 @@
                   <input matInput formControlName="textAnswer" placeholder="Type your answer here">
                 </mat-form-field>
               </div>
-              
+
               <!-- Essay Question -->
               <div *ngIf="question.type === 'Essay'">
                 <mat-form-field appearance="outline" class="full-width">
@@ -103,7 +103,7 @@
                   <textarea matInput formControlName="textAnswer" placeholder="Type your answer here" rows="5"></textarea>
                 </mat-form-field>
               </div>
-              
+
               <!-- Coding Question -->
               <div *ngIf="question.type === 'Coding'">
                 <mat-form-field appearance="outline" class="full-width">
@@ -115,7 +115,7 @@
           </mat-card-content>
         </mat-card>
       </div>
-      
+
       <div class="submit-section">
         <button mat-raised-button color="warn" type="button" (click)="goBackToCourse()">Quit Quiz</button>
         <button mat-raised-button color="primary" type="submit" [disabled]="submitting">
@@ -137,7 +137,7 @@
           <mat-icon>{{quizResult.isPassed ? 'check_circle' : 'cancel'}}</mat-icon>
           <h2>{{quizResult.isPassed ? 'Congratulations! You passed!' : 'Sorry, you did not pass.'}}</h2>
         </div>
-        
+
         <div class="result-details">
           <div class="result-item">
             <span class="label">Score:</span>

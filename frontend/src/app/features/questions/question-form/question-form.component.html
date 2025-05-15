@@ -1,0 +1,77 @@
+<!-- question-form.component.html -->
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit()" class="question-form">
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Question Text</mat-label>
+    <textarea matInput formControlName="text" placeholder="Enter the question text" rows="3"></textarea>
+    <mat-error *ngIf="questionForm.get('text')?.errors?.['required']">
+      Question text is required
+    </mat-error>
+  </mat-form-field>
+
+  <div class="form-row">
+    <mat-form-field appearance="outline" class="half-width">
+      <mat-label>Question Type</mat-label>
+      <mat-select formControlName="type">
+        <mat-option *ngFor="let type of questionTypes" [value]="type">
+          {{ type }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="questionForm.get('type')?.errors?.['required']">
+        Question type is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half-width">
+      <mat-label>Points</mat-label>
+      <input matInput type="number" formControlName="points" min="1">
+      <mat-error *ngIf="questionForm.get('points')?.errors?.['required']">
+        Points are required
+      </mat-error>
+      <mat-error *ngIf="questionForm.get('points')?.errors?.['min']">
+        Points must be at least 1
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="answers-section">
+    <h3>Answers</h3>
+    <p *ngIf="selectedType === QuestionType.TrueFalse" class="info-message">
+      For True/False questions, please select which option is correct.
+    </p>
+
+    <div formArrayName="answers" class="answers-list">
+      <div *ngFor="let answer of answers.controls; let i = index" [formGroupName]="i" class="answer-item">
+        <mat-checkbox formControlName="isCorrect" *ngIf="selectedType !== QuestionType.ShortAnswer">
+          Correct Answer
+        </mat-checkbox>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Answer Text</mat-label>
+          <input matInput formControlName="text" [placeholder]="'Enter answer text ' + (i + 1)">
+          <mat-error *ngIf="answer.get('text')?.errors?.['required']">
+            Answer text is required
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-icon-button type="button" (click)="removeAnswer(i)"
+                *ngIf="selectedType !== QuestionType.TrueFalse && answers.length > 1">
+          <mat-icon color="warn">delete</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <button mat-button type="button" (click)="addAnswer()"
+            *ngIf="selectedType !== QuestionType.TrueFalse && selectedType !== QuestionType.ShortAnswer"
+            class="add-answer-button">
+      <mat-icon>add</mat-icon>
+      Add Answer
+    </button>
+  </div>
+
+  <div class="form-actions">
+    <button mat-button type="button" (click)="onCancel.emit()">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="questionForm.invalid">
+      {{ question ? 'Update Question' : 'Create Question' }}
+    </button>
+  </div>
+</form>

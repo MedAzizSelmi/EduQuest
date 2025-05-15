@@ -1,0 +1,15 @@
+<!-- question-edit.component.html -->
+<div class="question-edit-container">
+  <div *ngIf="loading && !question" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="question">
+    <h1>Edit Question</h1>
+    <app-question-form
+      [question]="question"
+      (submitForm)="handleSubmit($event)"
+      (onCancel)="onCancel()">
+    </app-question-form>
+  </div>
+</div>

@@ -83,6 +83,12 @@ import {LessonListComponent} from './features/lessons/lesson-list/lesson-list.co
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {ModuleEditComponent} from './features/modules/module-edit/module-edit.component';
 import {LessonEditComponent} from './features/lessons/lesson-edit/lesson-edit.component';
+import {MatCheckbox, MatCheckboxModule} from '@angular/material/checkbox';
+import {QuestionManagementComponent} from './features/questions/question-management/question-management.component';
+import {ConfirmDialogComponent} from './core/components/confirm-dialog/confirm-dialog.component';
+import {QuestionFormComponent} from './features/questions/question-form/question-form.component';
+import {QuestionEditComponent} from './features/questions/question-edit/question-edit.component';
+import {QuestionCreateComponent} from './features/questions/question-create/question-create.component';
 
 @NgModule({
   declarations: [
@@ -130,7 +136,12 @@ import {LessonEditComponent} from './features/lessons/lesson-edit/lesson-edit.co
     ModuleCreateComponent,
     LessonListComponent,
     ModuleEditComponent,
-    LessonEditComponent
+    LessonEditComponent,
+    QuestionManagementComponent,
+    ConfirmDialogComponent,
+    QuestionFormComponent,
+    QuestionEditComponent,
+    QuestionCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -167,7 +178,8 @@ import {LessonEditComponent} from './features/lessons/lesson-edit/lesson-edit.co
     MatRadioGroup,
     MatRadioButton,
     MatLine,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatCheckboxModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

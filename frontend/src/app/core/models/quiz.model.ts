@@ -1,3 +1,6 @@
+import {Question} from './question.model';
+import {SubmitAnswerRequest} from './submit-answer-request.model';
+
 export interface Quiz {
   id: number
   title: string
@@ -6,23 +9,10 @@ export interface Quiz {
   timeLimit: number
   passingScore: number
   pointsToEarn: number
-  questionsCount: number
+  questionsCount?: number
   questions?: Question[]
 }
 
-export interface Question {
-  id: number
-  text: string
-  points: number
-  type: string
-  answers?: Answer[]
-}
-
-export interface Answer {
-  id: number
-  text: string
-  isCorrect: boolean
-}
 
 export interface CreateQuizRequest {
   title: string
@@ -41,40 +31,9 @@ export interface UpdateQuizRequest {
   pointsToEarn?: number
 }
 
-export interface CreateQuestionRequest {
-  text: string
-  points: number
-  type: string
-  quizId: number
-  answers: CreateAnswerRequest[]
-}
-
-export interface UpdateQuestionRequest {
-  text?: string
-  points?: number
-  type?: string
-}
-
-export interface CreateAnswerRequest {
-  text: string
-  isCorrect: boolean
-}
-
-export interface UpdateAnswerRequest {
-  text?: string
-  isCorrect?: boolean
-}
-
 export interface SubmitQuizRequest {
   startTime: Date
   answers: SubmitAnswerRequest[]
-}
-
-export interface SubmitAnswerRequest {
-  questionId: number
-  answerIds?: number[]
-  textAnswer?: string
-  codeAnswer?: string
 }
 
 export interface QuizResult {

@@ -1,0 +1,74 @@
+/* Updated SCSS for the table section */
+.table-wrapper {
+  overflow-x: auto;
+  padding: 0 1rem;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: #f8f9fa;
+      font-weight: 500;
+      border-bottom: 2px solid #eee;
+    }
+
+    td {
+      border-bottom: 1px solid #eee;
+    }
+
+    .question-text {
+      min-width: 300px;
+
+      .question-id {
+        display: block;
+        color: #999;
+        font-size: 0.8rem;
+        margin-top: 0.25rem;
+      }
+    }
+
+    .question-type {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .points-cell {
+      white-space: nowrap;
+      mat-icon {
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        color: #ffd700
+      }
+    }
+
+    .actions-cell {
+      width: 120px;
+      padding-right: 1rem;
+
+      .actions-container {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-end;
+      }
+
+      button {
+        margin: 0;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
