@@ -1,4 +1,36 @@
 /* Updated SCSS for the table section */
+.question-management-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+
+    back-button{
+      background: transparent;
+      &:hover{
+        background: rgba(0, 0, 0, 0.04);
+      }
+    }
+
+    .header-content{
+      flex: 1;
+      h1{
+        margin: 0;
+        color: #3f51b5;
+      }
+      .subtitle{
+        margin-top: 0;
+        color: #666;
+      }
+    }
+  }
+}
+
 .table-wrapper {
   overflow-x: auto;
   padding: 0 1rem;

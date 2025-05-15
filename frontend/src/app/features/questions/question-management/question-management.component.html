@@ -1,4 +1,20 @@
 <!-- Updated table section in question-management.component.html -->
+<div class="question-management-container">
+  <div class="header">
+    <button mat-icon-button (click)="goBackToQuiz()" class="back-button">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div class="header-content">
+      <h1>Question Management</h1>
+      <p class="subtitle">Organize and edit quiz questions</p>
+    </div>
+    <button mat-raised-button color="primary" (click)="addQuestion()" class="add-button">
+      <mat-icon>add</mat-icon>
+      Add Question
+    </button>
+  </div>
+</div>
+
 <div class="table-wrapper">
   <table mat-table [dataSource]="questions">
     <!-- Text Column -->
