@@ -60,6 +60,41 @@ namespace ELearningPlatform.API.Controllers
             if (!result) return NotFound();
             return NoContent();
         }
+        
+        [HttpGet("{examId}/questions")]
+        public async Task<ActionResult<IEnumerable<QuestionDto>>> GetQuestionsByExam(int examId)
+        {
+            var questions = await _examService.GetQuestionsByExamIdAsync(examId);
+            if (questions == null || !questions.Any())
+                return NotFound();
+            return Ok(questions);
+        }
+        
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpPost("questions/create")]
+        public async Task<ActionResult<Question>> CreateQuestion(CreateQuestionDto questionDto)
+        {
+            var question = await _examService.CreateQuestionAsync(questionDto);
+            return CreatedAtAction(nameof(GetQuestionsByExam), new { examId = question.ExamId }, question);
+        }
+
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpPut("{examId}/questions/{id}")]
+        public async Task<ActionResult<Question>> UpdateQuestion(int id, UpdateQuestionDto questionDto)
+        {
+            var question = await _examService.UpdateQuestionAsync(id, questionDto);
+            if (question == null) return NotFound();
+            return Ok(question);
+        }
+
+        [Authorize(Roles = "Teacher,Admin")]
+        [HttpDelete("{examId}/questions/{id}")]
+        public async Task<ActionResult> DeleteQuestion(int id)
+        {
+            var result = await _examService.DeleteQuestionAsync(id);
+            if (!result) return NotFound();
+            return NoContent();
+        }
 
         [Authorize(Roles = "Student")]
         [HttpPost("{id}/submit")]

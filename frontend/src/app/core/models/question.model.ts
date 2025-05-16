@@ -27,6 +27,7 @@ export interface CreateQuestionRequest {
   points: number
   type: QuestionType
   quizId: number
+  examId: number
   answers: CreateAnswerRequest[]
 }
 

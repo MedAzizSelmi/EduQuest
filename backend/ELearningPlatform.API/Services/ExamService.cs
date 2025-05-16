@@ -120,9 +120,10 @@ namespace ELearningPlatform.API.Services
 
         public async Task<bool> DeleteExamAsync(int id)
         {
-            var exam = await _context.Exams.FindAsync(id);
+            var exam = await _context.Exams.Include(e => e.Questions).FirstOrDefaultAsync(e => e.Id == id);
             if (exam == null) return false;
-
+            
+            _context.Questions.RemoveRange(exam.Questions);
             _context.Exams.Remove(exam);
             return await _context.SaveChangesAsync() > 0;
         }
@@ -270,6 +271,65 @@ namespace ELearningPlatform.API.Services
                 StartTime = submitExamDto.StartTime,
                 EndTime = now
             };
+        }
+        
+        public async Task<IEnumerable<QuestionDto>> GetQuestionsByExamIdAsync(int examId)
+        {
+            return await _context.Questions
+                .Where(q => q.ExamId == examId)
+                .Include(q => q.Answers) // Include answers if you need them
+                .Select(q => new QuestionDto
+                {
+                    Id = q.Id,
+                    Text = q.Text,
+                    Type = q.Type.ToString(),
+                    Points = q.Points,
+                    Answers = q.Answers.Select(a => new AnswerDto
+                    {
+                        Id = a.Id,
+                        Text = a.Text,
+                        IsCorrect = a.IsCorrect
+                    }).ToList()
+                })
+                .ToListAsync();
+        }
+        
+        public async Task<Question> CreateQuestionAsync(CreateQuestionDto questionDto)
+        {
+            var question = new Question
+            {
+                Text = questionDto.Text,
+                Points = questionDto.Points,
+                ExamId = questionDto.ExamId,
+                Type = questionDto.Type,
+            };
+
+            _context.Questions.Add(question);
+            await _context.SaveChangesAsync();
+            return question;
+        }
+
+        public async Task<Question> UpdateQuestionAsync(int id, UpdateQuestionDto questionDto)
+        {
+            var question = await _context.Questions.FindAsync(id);
+            if (question == null) return null;
+            
+            question.Text = questionDto.Text ?? question.Text;
+            question.Points = questionDto.Points ?? question.Points;
+            question.Type = questionDto.Type ?? question.Type;
+            question.UpdatedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return question;
+        }
+
+        public async Task<bool> DeleteQuestionAsync(int id)
+        {
+            var question = await _context.Questions.FindAsync(id);
+            if (question == null) return false;
+
+            _context.Questions.Remove(question);
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public async Task<IEnumerable<ExamResultDto>> GetUserExamResultsAsync(string userId)

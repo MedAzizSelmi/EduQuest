@@ -72,10 +72,22 @@ export class ProfileComponent implements OnInit {
   }
 
   getProfilePictureUrl(profilePicture: string): string {
-    return profilePicture
-      ? `http://localhost:5139/profile-pictures/${profilePicture}`
-      : 'assets/default-avatar.png';
+    if (!profilePicture) return 'assets/default-avatar.png';
+
+    // Avoid duplicating base URL
+    if (profilePicture.startsWith('http://') || profilePicture.startsWith('https://')) {
+      return profilePicture;
+    }
+
+    // Avoid double /profile-pictures/
+    if (profilePicture.startsWith('/profile-pictures/')) {
+      return `http://localhost:5139${profilePicture}`;
+    }
+
+    return `http://localhost:5139/profile-pictures/${profilePicture}`;
   }
+
+
 
   onSubmit(): void {
     this.submitted = true;

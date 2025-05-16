@@ -14,8 +14,8 @@
       <div class="profile-content">
         <div class="profile-avatar">
           <div class="avatar-container" (click)="editMode && fileInput.click()">
-            <img *ngIf="currentUser?.profilePicture || selectedImage"
-                 [src]="selectedImage || currentUser?.profilePicture"
+            <img *ngIf="selectedImage || currentUser?.profilePicture"
+                 [src]="selectedImage || getProfilePictureUrl(currentUser?.profilePicture || '')"
                  alt="Profile picture">
             <mat-icon *ngIf="!currentUser?.profilePicture && !selectedImage"
                       class="default-avatar">account_circle</mat-icon>

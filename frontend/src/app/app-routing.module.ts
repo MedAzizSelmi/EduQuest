@@ -182,6 +182,26 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'exams/:examId/edit/questions',
+    component: QuestionManagementComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['Teacher', 'Admin'] },
+    children: [
+      {
+        path: 'create',
+        component: QuestionCreateComponent,
+        canActivate: [AuthGuard, RoleGuard],
+        data: { roles: ['Teacher', 'Admin'] }
+      },
+      {
+        path: 'edit/:questionId',
+        component: QuestionEditComponent,
+        canActivate: [AuthGuard, RoleGuard],
+        data: { roles: ['Teacher', 'Admin'] }
+      }
+    ]
+  },
   // Gamification Routes
   {
     path: "gamification",

@@ -31,6 +31,21 @@ export class NavbarComponent implements OnInit {
     })
   }
 
+  getProfilePictureUrl(profilePicture: string | undefined): string {
+    if (!profilePicture) return 'assets/default-avatar.png';
+
+    if (profilePicture.startsWith('http://') || profilePicture.startsWith('https://')) {
+      return profilePicture;
+    }
+
+    if (profilePicture.startsWith('/profile-pictures/')) {
+      return `http://localhost:5139${profilePicture}`;
+    }
+
+    return `http://localhost:5139/profile-pictures/${profilePicture}`;
+  }
+
+
   onToggleSidebar(): void {
     this.toggleSidebar.emit()
   }

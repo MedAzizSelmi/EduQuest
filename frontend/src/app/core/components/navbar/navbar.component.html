@@ -39,14 +39,16 @@
 
     <ng-container *ngIf="currentUser">
       <button mat-raised-button color="accent" [matMenuTriggerFor]="userMenu" class="user-menu-trigger">
+        <mat-icon>arrow_drop_down</mat-icon>
+
+        <span class="username">{{currentUser.firstName}} {{currentUser.lastName}}</span>
+
         <div class="user-avatar" *ngIf="currentUser.profilePicture">
-          <img [src]="currentUser.profilePicture" alt="User avatar">
+          <img [src]="getProfilePictureUrl(currentUser.profilePicture)" alt="User avatar">
         </div>
         <div class="user-avatar" *ngIf="!currentUser.profilePicture">
           <mat-icon>account_circle</mat-icon>
         </div>
-        <span class="username">{{currentUser.firstName}} {{currentUser.lastName}}</span>
-        <mat-icon>arrow_drop_down</mat-icon>
       </button>
 
       <mat-menu #userMenu="matMenu">

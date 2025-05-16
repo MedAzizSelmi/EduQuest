@@ -8,8 +8,10 @@ namespace ELearningPlatform.API.Models
         public string Text { get; set; }
         public int Points { get; set; }
         public QuestionType Type { get; set; }
-        public int QuizId { get; set; }
-        public Quiz Quiz { get; set; }
+        public int? QuizId { get; set; }
+        public Quiz? Quiz { get; set; }
+        public int? ExamId { get; set; }
+        public Exam? Exam { get; set; }
         
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }

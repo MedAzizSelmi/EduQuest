@@ -7,6 +7,7 @@ import { Question } from '../../../core/models/question.model';
 import { MatDialog } from '@angular/material/dialog';
 import {QuestionType} from '../../../core/models/question.model';
 import {ConfirmDialogComponent} from '../../../core/components/confirm-dialog/confirm-dialog.component';
+import {ExamService} from '../../../core/services/exam.service';
 
 @Component({
   selector: 'app-question-management',
@@ -17,6 +18,7 @@ import {ConfirmDialogComponent} from '../../../core/components/confirm-dialog/co
 export class QuestionManagementComponent implements OnInit {
   questions: Question[] = [];
   quizId!: number;
+  examId!: number;
   loading = false;
   displayedColumns: string[] = ['text', 'type', 'points', 'actions'];
 
@@ -24,18 +26,36 @@ export class QuestionManagementComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private questionService: QuizService,
+    private examService: ExamService,
     private snackBar: MatSnackBar,
     private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
-    this.quizId = +this.route.snapshot.paramMap.get('quizId')!;
+    const quizIdParam = this.route.snapshot.paramMap.get('quizId');
+    const examIdParam = this.route.snapshot.paramMap.get('examId');
+    if (quizIdParam) {
+      this.quizId = +quizIdParam;
+    }else if (examIdParam) {
+      this.examId = +examIdParam;
+    }
     this.loadQuestions();
   }
 
   loadQuestions(): void {
     this.loading = true;
-    this.questionService.getQuestionsByQuiz(this.quizId).subscribe({
+    const request$ = this.quizId
+      ?this.questionService.getQuestionsByQuiz(this.quizId)
+      :this.examId
+        ?this.examService.getQuestionsByExam(this.examId): null;
+
+    if(!request$) {
+      this.snackBar.open('Invalid route: no quiz or exam ID found', 'Close', {
+        duration: 5000,
+      });
+    }
+
+    request$!.subscribe({
       next: (questions) => {
         this.questions = questions;
         this.loading = false;

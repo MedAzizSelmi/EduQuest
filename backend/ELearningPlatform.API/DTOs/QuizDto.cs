@@ -50,7 +50,8 @@ namespace ELearningPlatform.API.DTOs
         public string Text { get; set; }
         public int Points { get; set; }
         public QuestionType Type { get; set; }
-        public int QuizId { get; set; }
+        public int? QuizId { get; set; }
+        public int? ExamId { get; set; }
         public List<CreateAnswerDto> Answers { get; set; }
     }
 

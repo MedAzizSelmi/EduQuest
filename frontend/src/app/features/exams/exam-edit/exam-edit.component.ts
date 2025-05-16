@@ -119,9 +119,6 @@ export class ExamEditComponent implements OnInit {
   }
 
   manageQuestions(): void {
-    // This would navigate to a question management page
-    this.snackBar.open("Question management functionality would be implemented here", "Close", {
-      duration: 3000,
-    })
+    this.router.navigate(['questions'], { relativeTo: this.route });
   }
 }

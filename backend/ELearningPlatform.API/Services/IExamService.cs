@@ -12,6 +12,10 @@ namespace ELearningPlatform.API.Services
         Task<Exam> CreateExamAsync(CreateExamDto examDto);
         Task<Exam> UpdateExamAsync(int id, UpdateExamDto examDto);
         Task<bool> DeleteExamAsync(int id);
+        Task<IEnumerable<QuestionDto>> GetQuestionsByExamIdAsync(int examId);
+        Task<Question> CreateQuestionAsync(CreateQuestionDto questionDto);
+        Task<Question> UpdateQuestionAsync(int id, UpdateQuestionDto questionDto);
+        Task<bool> DeleteQuestionAsync(int id);
         Task<ExamResultDto> SubmitExamAsync(int examId, string userId, SubmitExamDto submitExamDto);
         Task<IEnumerable<ExamResultDto>> GetUserExamResultsAsync(string userId);
         Task<IEnumerable<ExamResultDto>> GetExamResultsByCourseIdAsync(int courseId, string userId);
