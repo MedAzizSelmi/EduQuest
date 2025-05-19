@@ -16,6 +16,8 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; // 👈 use this instead
+        options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
     });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

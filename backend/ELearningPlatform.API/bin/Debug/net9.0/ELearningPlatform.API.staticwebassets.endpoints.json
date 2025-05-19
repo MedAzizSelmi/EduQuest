@@ -3,8 +3,8 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "profile-pictures/b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).jpg",
-      "AssetFile": "profile-pictures/b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).jpg",
+      "Route": "profile-pictures/a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg",
+      "AssetFile": "profile-pictures/a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 12:32:29 GMT"
+          "Value": "Fri, 16 May 2025 13:22:11 GMT"
         }
       ],
       "EndpointProperties": [
@@ -40,8 +40,8 @@
       ]
     },
     {
-      "Route": "profile-pictures/b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).zfpidepdyc.jpg",
-      "AssetFile": "profile-pictures/b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).jpg",
+      "Route": "profile-pictures/a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).zfpidepdyc.jpg",
+      "AssetFile": "profile-pictures/a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -66,7 +66,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 12:32:29 GMT"
+          "Value": "Fri, 16 May 2025 13:22:11 GMT"
         }
       ],
       "EndpointProperties": [
@@ -80,7 +80,7 @@
         },
         {
           "Name": "label",
-          "Value": "profile-pictures/b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).jpg"
+          "Value": "profile-pictures/a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg"
         }
       ]
     },

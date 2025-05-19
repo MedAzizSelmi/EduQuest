@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import {QuestionType} from '../../../core/models/question.model';
 import {ConfirmDialogComponent} from '../../../core/components/confirm-dialog/confirm-dialog.component';
 import {ExamService} from '../../../core/services/exam.service';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-question-management',
@@ -17,6 +18,7 @@ import {ExamService} from '../../../core/services/exam.service';
 })
 export class QuestionManagementComponent implements OnInit {
   questions: Question[] = [];
+  dataSource= new MatTableDataSource<Question>();
   quizId!: number;
   examId!: number;
   loading = false;
@@ -53,17 +55,22 @@ export class QuestionManagementComponent implements OnInit {
       this.snackBar.open('Invalid route: no quiz or exam ID found', 'Close', {
         duration: 5000,
       });
+      this.dataSource.data = []
+      this.loading = false;
+      return;
     }
 
     request$!.subscribe({
       next: (questions) => {
-        this.questions = questions;
+        console.log('Received questions:', questions);
+        this.dataSource.data = questions;
         this.loading = false;
       },
       error: (error) => {
         this.snackBar.open('Error loading questions', 'Close', {
           duration: 5000,
         });
+        this.dataSource.data = []
         this.loading = false;
       }
     });

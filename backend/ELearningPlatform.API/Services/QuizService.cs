@@ -147,6 +147,11 @@ namespace ELearningPlatform.API.Services
                 Points = questionDto.Points,
                 QuizId = questionDto.QuizId,
                 Type = questionDto.Type,
+                Answers = questionDto.Answers.Select(a => new Answer
+                {
+                    Text = a.Text,
+                    IsCorrect = a.IsCorrect
+                }).ToList()
             };
 
             _context.Questions.Add(question);
@@ -156,17 +161,37 @@ namespace ELearningPlatform.API.Services
 
         public async Task<Question> UpdateQuestionAsync(int id, UpdateQuestionDto questionDto)
         {
-            var question = await _context.Questions.FindAsync(id);
+            var question = await _context.Questions
+                .Include(q => q.Answers)
+                .FirstOrDefaultAsync(q => q.Id == id);
+
             if (question == null) return null;
-            
+
+            // Update scalar properties
             question.Text = questionDto.Text ?? question.Text;
             question.Points = questionDto.Points ?? question.Points;
             question.Type = questionDto.Type ?? question.Type;
             question.UpdatedAt = DateTime.UtcNow;
 
+            // Update answers if provided
+            if (questionDto.Answers != null)
+            {
+                // Remove existing answers
+                _context.Answers.RemoveRange(question.Answers);
+
+                // Add new answers
+                question.Answers = questionDto.Answers.Select(a => new Answer
+                {
+                    Text = a.Text,
+                    IsCorrect = a.IsCorrect,
+                    QuestionId = question.Id
+                }).ToList();
+            }
+
             await _context.SaveChangesAsync();
             return question;
         }
+
 
         public async Task<bool> DeleteQuestionAsync(int id)
         {

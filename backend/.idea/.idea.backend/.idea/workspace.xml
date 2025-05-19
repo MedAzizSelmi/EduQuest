@@ -8,7 +8,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6a3118c-f039-4b9e-9f7a-15d4685b117d" name="Changes" comment="" />
+    <list default="true" id="c6a3118c-f039-4b9e-9f7a-15d4685b117d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/QuizDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/DTOs/QuizDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Services/ExamService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/ExamService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/Services/QuizService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/Services/QuizService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/bin/Debug/net9.0/ELearningPlatform.API.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ELearningPlatform.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ref/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/ref/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/refint/ELearningPlatform.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/refint/ELearningPlatform.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.endpoints.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/ELearningPlatform.API/obj/Debug/net9.0/staticwebassets/msbuild.ELearningPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/components/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/components/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/questions/question-management/question-management.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/questions/question-management/question-management.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/questions/question-management/question-management.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/questions/question-management/question-management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/features/quizzes/quiz-take/quiz-take.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/features/quizzes/quiz-take/quiz-take.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +139,8 @@
       <workItem from="1746706942381" duration="18934000" />
       <workItem from="1747038731079" duration="13118000" />
       <workItem from="1747299032219" duration="10984000" />
+      <workItem from="1747598512097" duration="2202000" />
+      <workItem from="1747643487460" duration="4599000" />
     </task>
     <servers />
   </component>

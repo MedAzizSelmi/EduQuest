@@ -100,6 +100,20 @@ export class QuizTakeComponent implements OnInit, OnDestroy {
           textAnswer: [""],
           codeAnswer: [""],
         })
+      case "Essay":
+        return this.formBuilder.group({
+          questionId: [question.id],
+          answerIds: [[]],
+          textAnswer: [""],
+          codeAnswer: [""],
+        });
+      case "Coding":
+        return this.formBuilder.group({
+          questionId: [question.id],
+          answerIds: [[]],
+          textAnswer: [""],
+          codeAnswer: [""],
+        });
       default:
         return this.formBuilder.group({
           questionId: [question.id],
@@ -162,6 +176,11 @@ export class QuizTakeComponent implements OnInit, OnDestroy {
   }
 
   goBackToCourse(): void {
+    if (this.started && !this.completed) {
+      const confirmed = confirm("Are you sure you want to quit the quiz? Your progress will be lost.");
+      if (!confirmed) return;
+    }
+
     if (this.quiz) {
       this.router.navigate(["/courses", this.quiz.courseId])
     } else {

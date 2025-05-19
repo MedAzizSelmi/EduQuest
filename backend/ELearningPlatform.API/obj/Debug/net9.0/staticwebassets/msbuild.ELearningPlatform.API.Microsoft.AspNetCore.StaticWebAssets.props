@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>ELearningPlatform.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ELearningPlatform.API</BasePath>
-      <RelativePath>profile-pictures/b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).jpg</RelativePath>
+      <RelativePath>profile-pictures/a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -16,7 +16,7 @@
       <Integrity>T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\b144784b-4b92-437b-ad7f-220a613a964a_cvim(maybe).jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\d72e7925-44fe-416f-9371-857c4a7c3266_OIP.jpg'))">
       <SourceType>Package</SourceType>
