@@ -4,6 +4,8 @@ import { MatSnackBar } from "@angular/material/snack-bar"
 import { Course, Module, Lesson } from "../../../core/models/course.model"
 import { CourseService } from "../../../core/services/course.service"
 import { AuthService } from "../../../core/services/auth.service"
+import {ProgressService} from '../../../core/services/progress.service';
+import {reduce, Subscription} from 'rxjs';
 
 @Component({
   selector: "app-course-detail",
@@ -19,6 +21,8 @@ export class CourseDetailComponent implements OnInit {
   isOwner = false
   activeModule: Module | null = null
   activeLesson: Lesson | null = null
+  courseProgress: number =0;
+  private progressSub!: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,11 +30,23 @@ export class CourseDetailComponent implements OnInit {
     private courseService: CourseService,
     private authService: AuthService,
     private snackBar: MatSnackBar,
+    private progressService: ProgressService,
   ) {}
 
   ngOnInit(): void {
     this.isTeacherOrAdmin = this.authService.hasRole("Teacher") || this.authService.hasRole("Admin")
     this.loadCourse()
+
+    const courseId = this.route.snapshot.paramMap.get("id")
+    this.progressSub = this.progressService.courseProgress$.subscribe(progressMap => {
+      this.courseProgress = progressMap.get(courseId!) || 0;
+    })
+  }
+
+  ngOnDestroy(): void {
+    if (this.progressSub) {
+      this.progressSub.unsubscribe()
+    }
   }
 
   loadCourse(): void {
@@ -40,6 +56,14 @@ export class CourseDetailComponent implements OnInit {
     this.courseService.getCourseById(courseId).subscribe({
       next: (course) => {
         this.course = course
+
+        const totalLessons = course.modules?.reduce(
+            (total, module) => total + (module.lessons?.length || 0), 0
+          ) || 0;
+
+        this.progressService.setTotalLessons(courseId.toString(), totalLessons)
+
+        this.courseProgress = this.progressService.getCourseProgress(courseId.toString())
 
         // Check if user is enrolled
         this.isEnrolled = course.progress !== undefined

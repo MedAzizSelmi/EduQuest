@@ -1,10 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<div class="lesson-read-container">
+  <div class="loading-container" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+    <p>Loading lesson...</p>
+  </div>
 
-</body>
-</html>
+  <div class="error-container" *ngIf="error">
+    <mat-icon color="warn">error</mat-icon>
+    <p>{{ error }}</p>
+    <button mat-raised-button color="primary" (click)="onNavigateBack()">
+      Back to Module
+    </button>
+  </div>
+
+  <ng-container *ngIf="!isLoading && !error && lesson">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ lesson.title }}</mat-card-title>
+        <mat-card-subtitle>
+          Duration: {{ lesson.durationInMinutes }} minutes
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div *ngIf="lesson.type === 'Video' && lesson.videoUrl" class="video-container">
+          <iframe
+            [src]="lesson.videoUrl || '' | safe"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="lesson-content" [innerHTML]="lesson.content || '' | safe: 'html'"></div>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-button (click)="onNavigateBack()">
+          Back to Module
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>

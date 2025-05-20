@@ -42,6 +42,7 @@ import {LessonEditComponent} from './features/lessons/lesson-edit/lesson-edit.co
 import {QuestionManagementComponent} from './features/questions/question-management/question-management.component';
 import {QuestionCreateComponent} from './features/questions/question-create/question-create.component';
 import {QuestionEditComponent} from './features/questions/question-edit/question-edit.component';
+import { LessonReadComponent } from "./features/lessons/lesson-read/lesson-read.component"
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -156,12 +157,12 @@ const routes: Routes = [
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ["Teacher", "Admin"] },
   },
-  /*{
+  {
     path: "courses/:courseId/modules/:moduleId/lessons/:lessonId/read",
     component: LessonReadComponent,
-    canActivate: [AuthGuard, RoleGuard],
+    canActivate: [AuthGuard],
     data: { roles: ["Student"] },
-  },*/
+  },
   {
     path: 'quizzes/:quizId/edit/questions',
     component: QuestionManagementComponent,

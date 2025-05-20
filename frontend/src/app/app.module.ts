@@ -89,6 +89,7 @@ import {ConfirmDialogComponent} from './core/components/confirm-dialog/confirm-d
 import {QuestionFormComponent} from './features/questions/question-form/question-form.component';
 import {QuestionEditComponent} from './features/questions/question-edit/question-edit.component';
 import {QuestionCreateComponent} from './features/questions/question-create/question-create.component';
+import {LessonReadComponent} from './features/lessons/lesson-read/lesson-read.component';
 
 @NgModule({
   declarations: [
@@ -141,7 +142,8 @@ import {QuestionCreateComponent} from './features/questions/question-create/ques
     ConfirmDialogComponent,
     QuestionFormComponent,
     QuestionEditComponent,
-    QuestionCreateComponent
+    QuestionCreateComponent,
+    LessonReadComponent
   ],
   imports: [
     BrowserModule,

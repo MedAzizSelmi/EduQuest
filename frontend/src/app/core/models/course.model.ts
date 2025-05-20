@@ -51,6 +51,16 @@ export interface Lesson {
   order: number
   durationInMinutes: number
   type: string
+  isCompleted?: boolean
+  completedAt?: Date
+  lastAccessedAt?: Date
+}
+
+export interface LessonProgress {
+  lessonId: number
+  isCompleted: boolean
+  completedAt: Date
+  lastAccessedAt: Date
 }
 
 export interface CreateCourseRequest {

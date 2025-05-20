@@ -63,11 +63,11 @@
     <div *ngIf="isEnrolled" class="course-progress-container">
       <div class="progress-header">
         <h3>Your Progress</h3>
-        <span class="progress-percentage">{{course.progress || 0}}% Complete</span>
+        <span class="progress-percentage">{{courseProgress}}% Complete</span>
       </div>
-      <mat-progress-bar mode="determinate" [value]="course.progress || 0" color="accent"></mat-progress-bar>
+      <mat-progress-bar mode="determinate" [value]="courseProgress" color="accent"></mat-progress-bar>
 
-      <div *ngIf="course.isCompleted" class="completion-badge">
+      <div *ngIf="courseProgress === 100" class="completion-badge">
         <mat-icon>verified</mat-icon>
         <span>Course Completed</span>
       </div>
