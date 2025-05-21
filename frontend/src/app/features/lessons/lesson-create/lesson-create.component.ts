@@ -49,7 +49,7 @@ export class LessonCreateComponent implements OnInit {
       moduleId: this.moduleId
     };
 
-    this.lessonService.createLesson(lessonData).subscribe({
+    this.lessonService.createLesson(this.courseId, this.moduleId, lessonData).subscribe({
       next: () => {
         this.snackBar.open('Lesson created successfully', 'Close', { duration: 3000 });
         this.router.navigate(['/modules', this.moduleId, 'lessons']);

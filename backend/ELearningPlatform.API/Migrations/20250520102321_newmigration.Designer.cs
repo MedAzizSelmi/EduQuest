@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ELearningPlatform.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250516124922_AddExamDeleteCascade")]
-    partial class AddExamDeleteCascade
+    [Migration("20250520102321_newmigration")]
+    partial class newmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -963,8 +963,7 @@ namespace ELearningPlatform.API.Migrations
                 {
                     b.HasOne("ELearningPlatform.API.Models.Exam", "Exam")
                         .WithMany("Questions")
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ExamId");
 
                     b.HasOne("ELearningPlatform.API.Models.Quiz", "Quiz")
                         .WithMany("Questions")

@@ -5,7 +5,7 @@
 namespace ELearningPlatform.API.Migrations
 {
     /// <inheritdoc />
-    public partial class AddExamDeleteCascade : Migration
+    public partial class newmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,21 +14,12 @@ namespace ELearningPlatform.API.Migrations
                 name: "FK_Questions_Exams_ExamId",
                 table: "Questions");
 
-            migrationBuilder.AlterColumn<int>(
-                name: "QuizId",
-                table: "Questions",
-                type: "int",
-                nullable: true,
-                oldClrType: typeof(int),
-                oldType: "int");
-
             migrationBuilder.AddForeignKey(
                 name: "FK_Questions_Exams_ExamId",
                 table: "Questions",
                 column: "ExamId",
                 principalTable: "Exams",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
         }
 
         /// <inheritdoc />
@@ -38,22 +29,13 @@ namespace ELearningPlatform.API.Migrations
                 name: "FK_Questions_Exams_ExamId",
                 table: "Questions");
 
-            migrationBuilder.AlterColumn<int>(
-                name: "QuizId",
-                table: "Questions",
-                type: "int",
-                nullable: false,
-                defaultValue: 0,
-                oldClrType: typeof(int),
-                oldType: "int",
-                oldNullable: true);
-
             migrationBuilder.AddForeignKey(
                 name: "FK_Questions_Exams_ExamId",
                 table: "Questions",
                 column: "ExamId",
                 principalTable: "Exams",
-                principalColumn: "Id");
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
         }
     }
 }

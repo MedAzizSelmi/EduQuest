@@ -960,8 +960,7 @@ namespace ELearningPlatform.API.Migrations
                 {
                     b.HasOne("ELearningPlatform.API.Models.Exam", "Exam")
                         .WithMany("Questions")
-                        .HasForeignKey("ExamId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ExamId");
 
                     b.HasOne("ELearningPlatform.API.Models.Quiz", "Quiz")
                         .WithMany("Questions")

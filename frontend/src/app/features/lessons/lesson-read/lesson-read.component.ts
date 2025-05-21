@@ -68,7 +68,7 @@ export class LessonReadComponent implements OnInit {
   updateProgress(): void {
     if (this.courseId && this.lessonId) {
       this.progressService.updateLessonProgress(this.courseId, this.lessonId);
-      this.snackBar.open('Lesson completed', 'Close', { duration: 2000 });
+      this.snackBar.open('Progress Saved', 'Close', { duration: 2000 });
     }
   }
 

@@ -103,7 +103,7 @@ export class CourseService {
     );
   }
 
-  createLesson(createLessonRequest: CreateLessonRequest): Observable<Lesson> {
+  createLesson(courseId: number, moduleId: number, createLessonRequest: CreateLessonRequest): Observable<Lesson> {
     return this.http.post<Lesson>(`${environment.apiUrl}/api/courses/${createLessonRequest.courseId}/modules/${createLessonRequest.moduleId}/lessons`, createLessonRequest)
   }
 
