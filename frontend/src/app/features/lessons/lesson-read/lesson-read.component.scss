@@ -11,7 +11,10 @@
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
-    margin-bottom: 2rem;
+    overflow: hidden;
+    margin: 2rem 0;
+    background: #000;
+    border-radius: 4px;
 
     iframe {
       position: absolute;
@@ -19,7 +22,15 @@
       left: 0;
       width: 100%;
       height: 100%;
+      border: none;
     }
+  }
+
+  .no-video-message {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+    font-style: italic;
   }
 
   .lesson-content {

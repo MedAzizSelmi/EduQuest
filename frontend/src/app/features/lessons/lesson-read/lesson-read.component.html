@@ -17,21 +17,21 @@
       <mat-card-header>
         <mat-card-title>{{ lesson.title }}</mat-card-title>
         <mat-card-subtitle>
-          Duration: {{ lesson.durationInMinutes }} minutes
+          Duration: {{ lesson.durationInMinutes }} minutes | Type: {{lesson.type}}
         </mat-card-subtitle>
       </mat-card-header>
 
       <mat-card-content>
-        <div *ngIf="lesson.type === 'Video' && lesson.videoUrl" class="video-container">
+        <div *ngIf="lesson.type === 'Video' && safeVideoUrl" class="video-container">
           <iframe
-            [src]="lesson.videoUrl || '' | safe"
+            [src]="safeVideoUrl"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
         </div>
 
-        <div class="lesson-content" [innerHTML]="lesson.content || '' | safe: 'html'"></div>
+        <div *ngIf="lesson.type !== 'Video'" class="lesson-content" [innerHTML]="lesson.content || '' | safe: 'html'"></div>
       </mat-card-content>
 
       <mat-card-actions align="end">

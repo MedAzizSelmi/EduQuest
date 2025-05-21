@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { environment } from '../../../../environments/environment';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Lesson } from '../../../core/models/course.model';
-import {ProgressService} from '../../../core/services/progress.service';
-
+import { ProgressService } from '../../../core/services/progress.service';
 
 @Component({
   selector: 'app-lesson-read',
   templateUrl: './lesson-read.component.html',
   styleUrls: ['./lesson-read.component.scss'],
-  standalone: false,
+  standalone: false
 })
 export class LessonReadComponent implements OnInit {
   lesson: Lesson | null = null;
@@ -21,6 +21,7 @@ export class LessonReadComponent implements OnInit {
   moduleId: string | null = null;
   lessonId: string | null = null;
   courseProgress: number = 0;
+  safeVideoUrl: SafeResourceUrl | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +29,7 @@ export class LessonReadComponent implements OnInit {
     private http: HttpClient,
     private snackBar: MatSnackBar,
     private progressService: ProgressService,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -52,6 +54,11 @@ export class LessonReadComponent implements OnInit {
       .subscribe({
         next: (lesson) => {
           this.lesson = lesson;
+          if (lesson.type === 'Video' && lesson.videoUrl) {
+            this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+              this.getEmbedUrl(lesson.videoUrl)
+            );
+          }
           this.isLoading = false;
           this.updateProgress();
         },
@@ -63,7 +70,28 @@ export class LessonReadComponent implements OnInit {
       });
   }
 
-  // lesson-read.component.ts
+  private getEmbedUrl(url: string): string {
+    // Handle YouTube URLs
+    if (url.includes('youtube.com') || url.includes('youtu.be')) {
+      const videoId = this.extractYouTubeId(url);
+      return `https://www.youtube.com/embed/${videoId}?rel=0`;
+    }
+
+    // Handle Vimeo URLs
+    if (url.includes('vimeo.com')) {
+      const videoId = url.split('/').pop() || '';
+      return `https://player.vimeo.com/video/${videoId}`;
+    }
+
+    // Return original URL if not a recognized video platform
+    return url;
+  }
+
+  private extractYouTubeId(url: string): string {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : '';
+  }
 
   updateProgress(): void {
     if (this.courseId && this.lessonId) {

@@ -13,6 +13,7 @@ import {
   UpdateLessonRequest, Attachment,
 } from "../models/course.model"
 import { environment } from "../../../environments/environment"
+import {catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: "root",
@@ -104,7 +105,12 @@ export class CourseService {
   }
 
   createLesson(courseId: number, moduleId: number, createLessonRequest: CreateLessonRequest): Observable<Lesson> {
-    return this.http.post<Lesson>(`${environment.apiUrl}/api/courses/${createLessonRequest.courseId}/modules/${createLessonRequest.moduleId}/lessons`, createLessonRequest)
+    return this.http.post<Lesson>(`${environment.apiUrl}/api/courses/${courseId}/modules/${moduleId}/lessons`, createLessonRequest).pipe(
+      catchError  (error => {
+        console.error('Error Creating lesson', error);
+        return throwError(error);
+      })
+    )
   }
 
   updateLesson(

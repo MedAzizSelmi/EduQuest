@@ -90,6 +90,7 @@ import {QuestionFormComponent} from './features/questions/question-form/question
 import {QuestionEditComponent} from './features/questions/question-edit/question-edit.component';
 import {QuestionCreateComponent} from './features/questions/question-create/question-create.component';
 import {LessonReadComponent} from './features/lessons/lesson-read/lesson-read.component';
+import {ChatComponent} from './core/components/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -143,7 +144,8 @@ import {LessonReadComponent} from './features/lessons/lesson-read/lesson-read.co
     QuestionFormComponent,
     QuestionEditComponent,
     QuestionCreateComponent,
-    LessonReadComponent
+    LessonReadComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

@@ -70,6 +70,9 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Add HttpClient
+builder.Services.AddHttpClient();
+
 // Add Services
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ICourseService, CourseService>();

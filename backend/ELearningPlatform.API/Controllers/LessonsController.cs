@@ -21,10 +21,19 @@ namespace ELearningPlatform.API.Controllers
 
         [Authorize(Roles = "Teacher,Admin")]
         [HttpPost]
-        public async Task<ActionResult<Lesson>> CreateLesson(CreateLessonDto lessonDto)
+        public async Task<ActionResult<Lesson>> CreateLesson(int courseId, int moduleId, CreateLessonDto lessonDto)
         {
             var lesson = await _lessonService.CreateLesson(lessonDto);
-            return CreatedAtAction(nameof(GetLesson), new { id = lesson.Id }, lesson);
+            return CreatedAtAction(
+                actionName: nameof(GetLesson), 
+                controllerName: null, // Let ASP.NET Core infer the current controller
+                routeValues: new { 
+                    courseId, 
+                    moduleId, 
+                    id = lesson.Id 
+                },
+                value: lesson
+            );
         }
 
         [HttpGet("{id}")]
