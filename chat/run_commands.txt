@@ -1,0 +1,19 @@
+# Commands to set up and run the Enhanced Chatbot API
+
+# 1. (Optional) Create and activate a virtual environment (if not already done)
+python -m venv chatbot
+
+# On Windows, activate the environment:
+chatbot\Scripts\activate
+
+# 2. Install required packages
+pip install fastapi uvicorn langchain langchain_community langchain_ollama fastembed
+
+# 3. (Optional) If you use Ollama locally, make sure it's running and the llama3 model is available
+# ollama run llama3
+
+# 4. Run the FastAPI server
+python main.py
+
+# The API will be available at http://localhost:8000
+# Test the /chat endpoint with a POST request using curl, Postman, or Python requests.
