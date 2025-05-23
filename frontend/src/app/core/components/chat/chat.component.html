@@ -2,7 +2,12 @@
 <div class="chat-container" [class.minimized]="isMinimized">
   <div class="chat-header">
     <h2>EduQuest Assistant</h2>
-    <p class="subtitle">Ask me anything about our courses</p>
+    <p class="subtitle" *ngIf="lessonId || moduleId || courseId">
+      Context:
+      <span *ngIf="courseId">Course {{courseId}}</span>
+      <span *ngIf="moduleId"> > Module {{moduleId}}</span>
+      <span *ngIf="lessonId"> > Lesson {{lessonId}}</span>
+    </p>
     <button class="minimize-btn" (click)="toggleMinimize()">
       <svg *ngIf="!isMinimized" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="5" y1="12" x2="19" y2="12"></line>

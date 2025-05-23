@@ -107,6 +107,7 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseCors("CorsPolicy");
 app.UseAuthentication();
 app.UseAuthorization();

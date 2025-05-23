@@ -46,7 +46,7 @@
   <div *ngIf="!loading" class="badge-grid">
     <mat-card *ngFor="let badge of getFilteredBadges()" class="badge-card" [class.earned]="badge.isEarned">
       <div class="badge-image">
-        <img [src]="badge.imageUrl" [alt]="badge.name">
+        <img [src]="apiUrl + badge.imageUrl" [alt]="badge.name">
         <div *ngIf="badge.isEarned" class="earned-overlay">
           <mat-icon>check_circle</mat-icon>
         </div>

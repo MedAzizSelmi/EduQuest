@@ -2,6 +2,7 @@ import { Component, type OnInit } from "@angular/core"
 import { GamificationService } from "../../../core/services/gamification.service"
 import { Badge, BadgeCategory } from "../../../core/models/badge.model"
 import { MatSnackBar } from "@angular/material/snack-bar"
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: "app-badges",
@@ -10,6 +11,7 @@ import { MatSnackBar } from "@angular/material/snack-bar"
   standalone: false
 })
 export class BadgesComponent implements OnInit {
+  apiUrl = `${environment.apiUrl}`
   badgeCategories: BadgeCategory[] = []
   userBadges: Badge[] = []
   earnedBadges: Badge[] = []

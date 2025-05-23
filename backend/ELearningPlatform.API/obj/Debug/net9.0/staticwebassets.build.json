@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fNozlYLO/f0oY7c+DNR1d4+TMDUD7POJan2nu1vfK5g=",
+  "Hash": "IPZmZ4qc1HPCL+UdSiNGYQkAUom1eh26En2K21azIJ8=",
   "Source": "ELearningPlatform.API",
   "BasePath": "_content/ELearningPlatform.API",
   "Mode": "Default",
@@ -16,6 +16,216 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularAssociateBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/angularAssociateBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nerq06qh8t",
+      "Integrity": "wTo3hDL8sSH2mWfvmYyCyae+kwvzd2ru7vjSzLibgQI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\angularAssociateBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularBeginnerBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/angularBeginnerBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lnauypnyzx",
+      "Integrity": "jxiTob2oeea68FlBSAODohgkNRqUSjo3eBilOX78U9Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\angularBeginnerBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularProfessionalBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/angularProfessionalBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rhy2pmgma1",
+      "Integrity": "H2zFn2a3rxpsNNkp333F5mEmmAmyOQlN5thl6l8XznQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\angularProfessionalBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetAssociateBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/dotnetAssociateBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5dueib7c3x",
+      "Integrity": "OV/IZFeTRapDO8hwhK06zjVvVGVwvbVymw/zWlnU66E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\dotnetAssociateBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetBeginnerBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/dotnetBeginnerBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "29fxhwtw6a",
+      "Integrity": "ijO1cfW4mcuu9GeTdinL4gdJJj+w+E9InM4HxB4DVDo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\dotnetBeginnerBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetProfessionalBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/dotnetProfessionalBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uzv7b4a7cz",
+      "Integrity": "unic81hCG40pjMIJTfYK5FoEF9hVUSVyFjW77sDwkWk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\dotnetProfessionalBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaAssociateBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/javaAssociateBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "09qnmr3sk3",
+      "Integrity": "XMn/MMAsRXaPikDlZ9BbDcFxd7bcwqRB6Vqm5Cv6C68=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\javaAssociateBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaBeginnerBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/javaBeginnerBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8a91cjxrii",
+      "Integrity": "wJJl0apeLzfm0wEPdJtcIqmTrc0BdFSlrah3HRnAz/4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\javaBeginnerBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaProfessionalBadge.png",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "images/badges/javaProfessionalBadge#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9hj6tcbxhw",
+      "Integrity": "HYVId56PoZsjqPbAuVHm0kglzUd3S/8guW+9TlJXHZE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\badges\\javaProfessionalBadge.png"
+    },
+    {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "profile-pictures/1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe)#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zfpidepdyc",
+      "Integrity": "T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg"
+    },
     {
       "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg",
       "SourceId": "ELearningPlatform.API",
@@ -101,6 +311,27 @@
       "OriginalItemSpec": "wwwroot\\profile-pictures\\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg"
     },
     {
+      "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg",
+      "SourceId": "ELearningPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\",
+      "BasePath": "_content/ELearningPlatform.API",
+      "RelativePath": "profile-pictures/f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe)#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zfpidepdyc",
+      "Integrity": "T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile-pictures\\f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg"
+    },
+    {
       "Identity": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\uploads\\courses\\6\\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg",
       "SourceId": "ELearningPlatform.API",
       "SourceType": "Discovered",
@@ -123,6 +354,826 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "images/badges/angularAssociateBadge.nerq06qh8t.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularAssociateBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "333186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wTo3hDL8sSH2mWfvmYyCyae+kwvzd2ru7vjSzLibgQI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nerq06qh8t"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/angularAssociateBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wTo3hDL8sSH2mWfvmYyCyae+kwvzd2ru7vjSzLibgQI="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/angularAssociateBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularAssociateBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "333186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wTo3hDL8sSH2mWfvmYyCyae+kwvzd2ru7vjSzLibgQI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wTo3hDL8sSH2mWfvmYyCyae+kwvzd2ru7vjSzLibgQI="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/angularBeginnerBadge.lnauypnyzx.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularBeginnerBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305892"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jxiTob2oeea68FlBSAODohgkNRqUSjo3eBilOX78U9Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lnauypnyzx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/angularBeginnerBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jxiTob2oeea68FlBSAODohgkNRqUSjo3eBilOX78U9Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/angularBeginnerBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularBeginnerBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305892"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jxiTob2oeea68FlBSAODohgkNRqUSjo3eBilOX78U9Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jxiTob2oeea68FlBSAODohgkNRqUSjo3eBilOX78U9Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/angularProfessionalBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularProfessionalBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "288035"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H2zFn2a3rxpsNNkp333F5mEmmAmyOQlN5thl6l8XznQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H2zFn2a3rxpsNNkp333F5mEmmAmyOQlN5thl6l8XznQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/angularProfessionalBadge.rhy2pmgma1.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\angularProfessionalBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "288035"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H2zFn2a3rxpsNNkp333F5mEmmAmyOQlN5thl6l8XznQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rhy2pmgma1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/angularProfessionalBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H2zFn2a3rxpsNNkp333F5mEmmAmyOQlN5thl6l8XznQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/dotnetAssociateBadge.5dueib7c3x.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetAssociateBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "329541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OV/IZFeTRapDO8hwhK06zjVvVGVwvbVymw/zWlnU66E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5dueib7c3x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/dotnetAssociateBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OV/IZFeTRapDO8hwhK06zjVvVGVwvbVymw/zWlnU66E="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/dotnetAssociateBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetAssociateBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "329541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OV/IZFeTRapDO8hwhK06zjVvVGVwvbVymw/zWlnU66E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OV/IZFeTRapDO8hwhK06zjVvVGVwvbVymw/zWlnU66E="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/dotnetBeginnerBadge.29fxhwtw6a.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetBeginnerBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "335997"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ijO1cfW4mcuu9GeTdinL4gdJJj+w+E9InM4HxB4DVDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "29fxhwtw6a"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/dotnetBeginnerBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ijO1cfW4mcuu9GeTdinL4gdJJj+w+E9InM4HxB4DVDo="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/dotnetBeginnerBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetBeginnerBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "335997"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ijO1cfW4mcuu9GeTdinL4gdJJj+w+E9InM4HxB4DVDo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ijO1cfW4mcuu9GeTdinL4gdJJj+w+E9InM4HxB4DVDo="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/dotnetProfessionalBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetProfessionalBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "328589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"unic81hCG40pjMIJTfYK5FoEF9hVUSVyFjW77sDwkWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-unic81hCG40pjMIJTfYK5FoEF9hVUSVyFjW77sDwkWk="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/dotnetProfessionalBadge.uzv7b4a7cz.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\dotnetProfessionalBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "328589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"unic81hCG40pjMIJTfYK5FoEF9hVUSVyFjW77sDwkWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uzv7b4a7cz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/dotnetProfessionalBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-unic81hCG40pjMIJTfYK5FoEF9hVUSVyFjW77sDwkWk="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/javaAssociateBadge.09qnmr3sk3.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaAssociateBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "359362"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XMn/MMAsRXaPikDlZ9BbDcFxd7bcwqRB6Vqm5Cv6C68=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "09qnmr3sk3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/javaAssociateBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XMn/MMAsRXaPikDlZ9BbDcFxd7bcwqRB6Vqm5Cv6C68="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/javaAssociateBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaAssociateBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "359362"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XMn/MMAsRXaPikDlZ9BbDcFxd7bcwqRB6Vqm5Cv6C68=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XMn/MMAsRXaPikDlZ9BbDcFxd7bcwqRB6Vqm5Cv6C68="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/javaBeginnerBadge.8a91cjxrii.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaBeginnerBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "344675"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wJJl0apeLzfm0wEPdJtcIqmTrc0BdFSlrah3HRnAz/4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8a91cjxrii"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/javaBeginnerBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wJJl0apeLzfm0wEPdJtcIqmTrc0BdFSlrah3HRnAz/4="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/javaBeginnerBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaBeginnerBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "344675"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wJJl0apeLzfm0wEPdJtcIqmTrc0BdFSlrah3HRnAz/4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wJJl0apeLzfm0wEPdJtcIqmTrc0BdFSlrah3HRnAz/4="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/javaProfessionalBadge.9hj6tcbxhw.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaProfessionalBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "387114"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HYVId56PoZsjqPbAuVHm0kglzUd3S/8guW+9TlJXHZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9hj6tcbxhw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/badges/javaProfessionalBadge.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HYVId56PoZsjqPbAuVHm0kglzUd3S/8guW+9TlJXHZE="
+        }
+      ]
+    },
+    {
+      "Route": "images/badges/javaProfessionalBadge.png",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\images\\badges\\javaProfessionalBadge.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "387114"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HYVId56PoZsjqPbAuVHm0kglzUd3S/8guW+9TlJXHZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 18:49:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HYVId56PoZsjqPbAuVHm0kglzUd3S/8guW+9TlJXHZE="
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178770"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 08:23:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y="
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).zfpidepdyc.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178770"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 08:23:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zfpidepdyc"
+        },
+        {
+          "Name": "label",
+          "Value": "profile-pictures/1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y="
+        }
+      ]
+    },
     {
       "Route": "profile-pictures/a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg",
       "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg",
@@ -448,6 +1499,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-YHfLuUbNtYqPD0a2j28V+xTFGP4bI9eFvn4RUsSG/PM="
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178770"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 08:48:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y="
+        }
+      ]
+    },
+    {
+      "Route": "profile-pictures/f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).zfpidepdyc.jpg",
+      "AssetFile": "C:\\Users\\azizs\\EduQuest\\backend\\ELearningPlatform.API\\wwwroot\\profile-pictures\\f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178770"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 08:48:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zfpidepdyc"
+        },
+        {
+          "Name": "label",
+          "Value": "profile-pictures/f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y="
         }
       ]
     },

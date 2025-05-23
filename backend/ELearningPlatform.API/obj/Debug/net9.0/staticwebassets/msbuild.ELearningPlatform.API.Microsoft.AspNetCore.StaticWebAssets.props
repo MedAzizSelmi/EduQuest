@@ -1,5 +1,185 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\angularAssociateBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/angularAssociateBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nerq06qh8t</Fingerprint>
+      <Integrity>wTo3hDL8sSH2mWfvmYyCyae+kwvzd2ru7vjSzLibgQI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\angularAssociateBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\angularBeginnerBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/angularBeginnerBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lnauypnyzx</Fingerprint>
+      <Integrity>jxiTob2oeea68FlBSAODohgkNRqUSjo3eBilOX78U9Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\angularBeginnerBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\angularProfessionalBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/angularProfessionalBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>rhy2pmgma1</Fingerprint>
+      <Integrity>H2zFn2a3rxpsNNkp333F5mEmmAmyOQlN5thl6l8XznQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\angularProfessionalBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\dotnetAssociateBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/dotnetAssociateBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5dueib7c3x</Fingerprint>
+      <Integrity>OV/IZFeTRapDO8hwhK06zjVvVGVwvbVymw/zWlnU66E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\dotnetAssociateBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\dotnetBeginnerBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/dotnetBeginnerBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>29fxhwtw6a</Fingerprint>
+      <Integrity>ijO1cfW4mcuu9GeTdinL4gdJJj+w+E9InM4HxB4DVDo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\dotnetBeginnerBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\dotnetProfessionalBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/dotnetProfessionalBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>uzv7b4a7cz</Fingerprint>
+      <Integrity>unic81hCG40pjMIJTfYK5FoEF9hVUSVyFjW77sDwkWk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\dotnetProfessionalBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\javaAssociateBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/javaAssociateBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>09qnmr3sk3</Fingerprint>
+      <Integrity>XMn/MMAsRXaPikDlZ9BbDcFxd7bcwqRB6Vqm5Cv6C68=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\javaAssociateBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\javaBeginnerBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/javaBeginnerBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8a91cjxrii</Fingerprint>
+      <Integrity>wJJl0apeLzfm0wEPdJtcIqmTrc0BdFSlrah3HRnAz/4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\javaBeginnerBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\javaProfessionalBadge.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>images/badges/javaProfessionalBadge.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9hj6tcbxhw</Fingerprint>
+      <Integrity>HYVId56PoZsjqPbAuVHm0kglzUd3S/8guW+9TlJXHZE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\badges\javaProfessionalBadge.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>profile-pictures/1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>zfpidepdyc</Fingerprint>
+      <Integrity>T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\1383ec34-d4f9-43fd-aa09-1ad395cab55a_cvim(maybe).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\a270408b-45a6-49f7-b068-69537dea6c4d_cvim(maybe).jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>ELearningPlatform.API</SourceId>
@@ -71,6 +251,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\f74f632a-d715-40a5-b9f1-8d82014dcb7b_R.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ELearningPlatform.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ELearningPlatform.API</BasePath>
+      <RelativePath>profile-pictures/f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>zfpidepdyc</Fingerprint>
+      <Integrity>T0aT5GnYOz44GN3ymX7vabBP2JNx1/u/ottyIFCpB5Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile-pictures\f7927e06-2b99-4173-815a-bf1e40a0ebcc_cvim(maybe).jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\courses\6\4184a04b-4409-41d7-8cf3-ed1367adc50d_OIP.jpg'))">
       <SourceType>Package</SourceType>
